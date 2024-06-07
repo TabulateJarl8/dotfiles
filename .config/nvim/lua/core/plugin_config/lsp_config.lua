@@ -1,6 +1,6 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "pyright" }
+	ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "jdtls" }
 })
 
 local on_attach = function(_, bufnr)
@@ -16,3 +16,4 @@ end
 require("lspconfig").lua_ls.setup { on_attach = on_attach }
 require("lspconfig").rust_analyzer.setup { on_attach = on_attach }
 require("lspconfig").pyright.setup { on_attach = on_attach }
+require("lspconfig").jdtls.setup { on_attach = on_attach }
