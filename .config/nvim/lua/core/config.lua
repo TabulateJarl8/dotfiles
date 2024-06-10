@@ -17,3 +17,15 @@ vim.api.nvim_command("syntax enable")
 -- enable filetype detections, plugins, and auto indenting
 vim.api.nvim_command("filetype plugin indent on")
 vim.g.rustfmt_autosave = 1
+
+-- show whitespace
+-- set list listchars=tab:»\ ,trail:·,nbsp:⎵,precedes:<,extends:>,leadmultispace:·
+vim.opt.list = true
+vim.opt.listchars = {
+	tab = "»\\ ",
+	trail = "·",
+	nbsp = "⎵",
+	precedes = "<",
+	extends = ">",
+	leadmultispace = "·",
+}
