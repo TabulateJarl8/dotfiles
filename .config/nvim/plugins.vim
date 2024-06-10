@@ -26,4 +26,9 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
+Plug 'm4xshen/autoclose.nvim'
+Plug 'saecki/crates.nvim', { 'tag': 'stable' }
+Plug 'rust-lang/rust.vim'
+Plug 'mrcjkb/rustaceanvim'
+Plug 'numToStr/Comment.nvim'
 call plug#end()

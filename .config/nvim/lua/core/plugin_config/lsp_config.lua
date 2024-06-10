@@ -4,6 +4,7 @@ require('mason-lspconfig').setup({
 })
 
 local cmp = require'cmp'
+local util = require'lspconfig/util'
 
 cmp.setup({
   snippet = {
@@ -33,6 +34,7 @@ cmp.setup({
     -- { name = 'luasnip' }, -- For luasnip users.
     -- { name = 'ultisnips' }, -- For ultisnips users.
     -- { name = 'snippy' }, -- For snippy users.
+    { name = 'crates' }
   }, {
     { name = 'buffer' },
   })
@@ -77,7 +79,28 @@ local on_attach = function(_, bufnr)
 	vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
+-- rustaceanvim config
+vim.g.rustaceanvim = function()
+	return {
+		server = {
+			on_attach = on_attach,
+			capabilities = capabilities,
+		}
+	}
+end
 require("lspconfig").lua_ls.setup { on_attach = on_attach, capabilities = capabilities }
-require("lspconfig").rust_analyzer.setup { on_attach = on_attach, capabilities = capabilities }
+--[[ require("lspconfig").rust_analyzer.setup {
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = {'rust'},
+	root_dir = util.root_pattern("Cargo.toml"),
+	settings = {
+		['rust-analyzer'] = {
+			cargo = {
+				allFeatures = true,
+			}
+		}
+	}
+} ]]--
 require("lspconfig").pyright.setup { on_attach = on_attach, capabilities = capabilities }
 require("lspconfig").jdtls.setup { on_attach = on_attach, capabilities = capabilities }
