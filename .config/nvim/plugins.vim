@@ -32,4 +32,5 @@ Plug 'rust-lang/rust.vim'
 Plug 'mrcjkb/rustaceanvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'stevearc/conform.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()

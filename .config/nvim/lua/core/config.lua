@@ -14,9 +14,9 @@ augroup END
 -- Buffer behavior
 vim.o.relativenumber = true
 vim.o.number = true
-vim.o.signcolumn = "number"
 vim.o.splitbelow = true
 vim.o.splitright = true
+vim.o.signcolumn = "yes"
 
 -- tab behavior
 vim.o.tabstop = 4
