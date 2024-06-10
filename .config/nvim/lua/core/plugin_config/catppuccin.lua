@@ -1,4 +1,4 @@
-require('catppuccin').setup({
+require("catppuccin").setup({
 	flavour = "mocha",
 	integrations = {
 		nvimtree = true,
@@ -8,4 +8,4 @@ require('catppuccin').setup({
 	},
 })
 
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme("catppuccin")

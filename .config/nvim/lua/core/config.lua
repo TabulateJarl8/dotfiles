@@ -13,7 +13,7 @@ augroup END
 
 -- for rust-lang/rust.vim
 -- enable syntax highlighting
-vim.api.nvim_command('syntax enable')
+vim.api.nvim_command("syntax enable")
 -- enable filetype detections, plugins, and auto indenting
-vim.api.nvim_command('filetype plugin indent on')
+vim.api.nvim_command("filetype plugin indent on")
 vim.g.rustfmt_autosave = 1

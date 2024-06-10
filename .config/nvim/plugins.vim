@@ -31,4 +31,5 @@ Plug 'saecki/crates.nvim', { 'tag': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'mrcjkb/rustaceanvim'
 Plug 'numToStr/Comment.nvim'
+Plug 'stevearc/conform.nvim'
 call plug#end()
