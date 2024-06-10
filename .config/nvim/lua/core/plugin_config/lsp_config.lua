@@ -1,10 +1,10 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "jdtls" },
+	ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "jdtls", "clangd" },
 })
 
 local cmp = require("cmp")
-local util = require("lspconfig/util")
+-- local util = require("lspconfig/util")
 
 cmp.setup({
 	snippet = {
@@ -112,3 +112,4 @@ require("lspconfig").lua_ls.setup({ on_attach = on_attach, capabilities = capabi
 --
 require("lspconfig").pyright.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").clangd.setup({ on_attach = on_attach, capabilities = capabilities })
