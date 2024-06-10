@@ -33,4 +33,5 @@ Plug 'mrcjkb/rustaceanvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'stevearc/conform.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'akinsho/git-conflict.nvim'
 call plug#end()
