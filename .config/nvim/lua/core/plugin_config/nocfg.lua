@@ -2,3 +2,4 @@
 require("crates").setup()
 require("Comment").setup()
 require("autoclose").setup()
+require("nvim-highlight-colors").setup({})

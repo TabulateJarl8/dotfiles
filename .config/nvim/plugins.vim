@@ -8,7 +8,6 @@ endif
 
 " Import plugins
 call plug#begin(stdpath('config').'/autoload/plugged')
-Plug 'ap/vim-css-color'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'williamboman/mason.nvim'
@@ -33,4 +32,5 @@ Plug 'mrcjkb/rustaceanvim'
 Plug 'numToStr/Comment.nvim'
 Plug 'stevearc/conform.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'brenoprata10/nvim-highlight-colors'
 call plug#end()
