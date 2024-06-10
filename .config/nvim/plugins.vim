@@ -6,7 +6,7 @@ silent !curl "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vi
 autocmd VimEnter * PlugInstall
 endif
 
-" Imports my plugins
+" Import plugins
 call plug#begin(stdpath('config').'/autoload/plugged')
 Plug 'ap/vim-css-color'
 Plug 'nvim-tree/nvim-tree.lua'

@@ -1,13 +1,6 @@
 -- Set leader character to space
 vim.g.mapleader = " "
 
--- Buffer behavior
-vim.o.relativenumber = true
-vim.o.number = true
-vim.o.signcolumn = "number"
-vim.o.splitbelow = true
-vim.o.splitright = true
-
 -- Yank to clipboard
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 
