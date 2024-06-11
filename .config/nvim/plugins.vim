@@ -33,4 +33,5 @@ Plug 'numToStr/Comment.nvim'
 Plug 'stevearc/conform.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'brenoprata10/nvim-highlight-colors'
+Plug 'mfussenegger/nvim-dap'
 call plug#end()
