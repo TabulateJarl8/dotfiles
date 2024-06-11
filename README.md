@@ -12,3 +12,8 @@ Then, install with GNU stow:
 cd dotfiles
 stow .
 ```
+
+Install Arch dependencies:
+```sh
+sudo pacman -Sy lldb ripgrep stylua ruff astyle git --needed
+```

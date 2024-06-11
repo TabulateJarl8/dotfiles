@@ -34,4 +34,5 @@ Plug 'stevearc/conform.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'mfussenegger/nvim-dap'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 call plug#end()
