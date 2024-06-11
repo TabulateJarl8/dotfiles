@@ -35,4 +35,6 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'brenoprata10/nvim-highlight-colors'
 Plug 'mfussenegger/nvim-dap'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'wintermute-cell/gitignore.nvim'
+Plug 'nvim-lua/plenary.nvim'
 call plug#end()
