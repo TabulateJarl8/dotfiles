@@ -117,3 +117,8 @@ require("lspconfig").lua_ls.setup({
 require("lspconfig").pyright.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").clangd.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").asm_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").html.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").cssmodules_ls.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").css_variables.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").cssls.setup({ on_attach = on_attach, capabilities = capabilities })
