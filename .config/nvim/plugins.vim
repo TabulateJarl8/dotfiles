@@ -37,4 +37,5 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'wintermute-cell/gitignore.nvim'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'andweeb/presence.nvim'
 call plug#end()
