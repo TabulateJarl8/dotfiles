@@ -5,9 +5,12 @@ require("conform").setup({
 		javascript = { { "prettierd", "prettier" } },
 		c = { "clang-format" },
 	},
-	format_on_save = {
-		-- These options will be passed to conform.format()
-		timeout_ms = 500,
-		lsp_fallback = true,
-	},
+	-- dont format certain directories
+	format_on_save = function(bufnr)
+		local bufname = vim.api.nvim_buf_get_name(bufnr)
+		if bufname:match("/qmk_firmware/") then
+			return
+		end
+		return { timeout_ms = 500, lsp_fallback = true }
+	end,
 })
