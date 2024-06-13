@@ -18,6 +18,9 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.signcolumn = "yes"
 
+-- arrow key wrap on ends
+vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, ["["] = true, ["]"] = true })
+
 -- ensure termguicolors is enabled for nvim-highlight-colors
 vim.opt.termguicolors = true
 
