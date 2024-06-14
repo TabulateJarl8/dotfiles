@@ -15,6 +15,9 @@ vim.keymap.set("n", "<C-j>", "<C-w>j", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-k>", "<C-w>k", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 
+-- make escape in normal mode clear highlighting
+vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true })
+
 -- insert a blank line below and above your cursor without going into insert mode
 vim.keymap.set(
 	"n",
