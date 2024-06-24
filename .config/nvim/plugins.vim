@@ -13,7 +13,7 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': 'TSUpdate' }
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
@@ -38,4 +38,5 @@ Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'wintermute-cell/gitignore.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'andweeb/presence.nvim'
+Plug 'chomosuke/typst-preview.nvim', {'tag': 'v0.3.*', 'do': ':TypstPreviewUpdate'}
 call plug#end()
