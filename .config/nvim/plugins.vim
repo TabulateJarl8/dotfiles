@@ -39,4 +39,5 @@ Plug 'wintermute-cell/gitignore.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'andweeb/presence.nvim'
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v0.3.*', 'do': ':TypstPreviewUpdate'}
+Plug 'lervag/vimtex'
 call plug#end()
