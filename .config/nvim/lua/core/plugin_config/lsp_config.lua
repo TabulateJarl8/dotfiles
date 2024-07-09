@@ -95,31 +95,28 @@ vim.g.rustaceanvim = function()
 	}
 end
 
-require("lspconfig").lua_ls.setup({
+local lspconfig = require("lspconfig")
+lspconfig.lua_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	settings = { Lua = { diagnostics = { globals = { "vim" } } } },
 })
---[[ require("lspconfig").rust_analyzer.setup {
+
+local vue_lsp_path = require("mason-registry").get_package("vue-language-server"):get_install_path()
+	.. "/node_modules/@vue/language-server"
+lspconfig.tsserver.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
-	filetypes = {'rust'},
-	root_dir = util.root_pattern("Cargo.toml"),
-	settings = {
-		['rust-analyzer'] = {
-			cargo = {
-				allFeatures = true,
-			}
-		}
-	}
-} ]]
---
-require("lspconfig").pyright.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").clangd.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").asm_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").html.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").cssmodules_ls.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").css_variables.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").cssls.setup({ on_attach = on_attach, capabilities = capabilities })
-require("lspconfig").tsserver.setup({ on_attach = on_attach, capabilities = capabilities })
+	init_options = { plugins = { { name = "@vue/typescript-plugin", location = vue_lsp_path, languages = { "vue" } } } },
+	filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+})
+lspconfig.volar.setup({ on_attach = on_attach, capabilities = capabilities })
+
+lspconfig.pyright.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.clangd.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.asm_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.html.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.cssmodules_ls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.css_variables.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.cssls.setup({ on_attach = on_attach, capabilities = capabilities })
