@@ -122,3 +122,4 @@ require("lspconfig").html.setup({ on_attach = on_attach, capabilities = capabili
 require("lspconfig").cssmodules_ls.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").css_variables.setup({ on_attach = on_attach, capabilities = capabilities })
 require("lspconfig").cssls.setup({ on_attach = on_attach, capabilities = capabilities })
+require("lspconfig").tsserver.setup({ on_attach = on_attach, capabilities = capabilities })

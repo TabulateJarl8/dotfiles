@@ -16,4 +16,5 @@ stow .
 Install Arch dependencies:
 ```sh
 sudo pacman -Sy lldb ripgrep stylua ruff astyle git latexmk biber --needed
+paru -S biome-bin
 ```
