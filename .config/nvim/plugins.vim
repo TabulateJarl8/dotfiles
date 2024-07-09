@@ -40,4 +40,5 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'andweeb/presence.nvim'
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v0.3.*', 'do': ':TypstPreviewUpdate'}
 Plug 'lervag/vimtex'
+Plug 'romgrk/barbar.nvim'
 call plug#end()
