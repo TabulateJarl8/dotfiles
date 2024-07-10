@@ -73,6 +73,7 @@ local capabilities = require("cmp_nvim_lsp").default_capabilities()
 local on_attach = function(_, bufnr)
 	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+	vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
 
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
