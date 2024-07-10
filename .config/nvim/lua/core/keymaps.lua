@@ -91,7 +91,9 @@ vim.api.nvim_set_keymap("n", "<A-9>", "<Cmd>BufferGoto 9<CR>", opts)
 vim.api.nvim_set_keymap("n", "<A-0>", "<Cmd>BufferLast<CR>", opts)
 
 vim.api.nvim_set_keymap("n", "<A-p>", "<Cmd>BufferPin<CR>", opts)
-vim.api.nvim_set_keymap("n", "<A-c>", "<Cmd>BufferClose<CR>", opts)
+vim.api.nvim_set_keymap("n", "<Leader>w", "<Cmd>BufferClose<CR>", opts)
 vim.api.nvim_set_keymap("n", "<A-x>", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>", opts)
 
 vim.api.nvim_set_keymap("n", "<A-l>", "<Cmd>BufferPick<CR>", opts)
+
+vim.api.nvim_set_keymap("n", "<Leader><Space>", "<Cmd>Telescope buffers<CR>", opts)
