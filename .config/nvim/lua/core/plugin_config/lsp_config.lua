@@ -1,6 +1,20 @@
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "rust_analyzer", "pyright", "jdtls", "clangd" },
+	ensure_installed = {
+		"lua_ls",
+		"rust_analyzer",
+		"pyright",
+		"jdtls",
+		"clangd",
+		"volar",
+		"tsserver",
+		"asm_lsp",
+		"html",
+		"cssmodules_ls",
+		"css_variables",
+		"cssls",
+		"jsonls",
+	},
 })
 
 local cmp = require("cmp")
