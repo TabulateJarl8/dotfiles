@@ -1,6 +1,6 @@
-local biome = function(bufnr)
-	if require("conform").get_formatter_info("biome", bufnr).available then
-		return { "biome" }
+local prettier = function(bufnr)
+	if require("conform").get_formatter_info("prettier", bufnr).available then
+		return { "prettier" }
 	else
 		return {}
 	end
@@ -10,8 +10,9 @@ require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
-		javascript = biome,
-		typescript = biome,
+		javascript = prettier,
+		typescript = prettier,
+		vue = prettier,
 		c = { "clang-format" },
 	},
 	-- dont format certain directories
