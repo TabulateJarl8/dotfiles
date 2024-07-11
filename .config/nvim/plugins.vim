@@ -69,6 +69,9 @@ Plug 'brenoprata10/nvim-highlight-colors'
 " Tab bar
 Plug 'romgrk/barbar.nvim'
 
+" TODO highlighting
+Plug 'folke/todo-comments.nvim'
+
 """""""""""""""""""""""""""""""""
 """ LANGUAGE SPECIFIC PLUGINS """
 """""""""""""""""""""""""""""""""
