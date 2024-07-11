@@ -8,16 +8,20 @@ endif
 
 " Import plugins
 call plug#begin(stdpath('config').'/autoload/plugged')
-Plug 'nvim-tree/nvim-tree.lua'
+" dependencies
 Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-lua/plenary.nvim'
+
+"""""""""""""""""""""""
+""" EDITOR FEATURES """
+"""""""""""""""""""""""
+" nvim-tree file manager
+Plug 'nvim-tree/nvim-tree.lua'
+
+" LSP integration
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
-Plug 'nvim-lualine/lualine.nvim'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -25,21 +29,67 @@ Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
-Plug 'windwp/nvim-autopairs'
+Plug 'mfussenegger/nvim-dap'
+
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+
+" Telescope
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
+
+" Documentation generator
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+
+" gitignore downloader
+Plug 'wintermute-cell/gitignore.nvim'
+
+" Discord RPC
+Plug 'andweeb/presence.nvim'
+
+"""""""""""""""""""""""""
+""" EDITOR APPEARANCE """
+"""""""""""""""""""""""""
+" Theme
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+
+" lualine
+Plug 'nvim-lualine/lualine.nvim'
+
+" Git integration
+Plug 'lewis6991/gitsigns.nvim'
+
+" Highlight colors with themselves in editor
+Plug 'brenoprata10/nvim-highlight-colors'
+
+" Tab bar
+Plug 'romgrk/barbar.nvim'
+
+"""""""""""""""""""""""""""""""""
+""" LANGUAGE SPECIFIC PLUGINS """
+"""""""""""""""""""""""""""""""""
+" Rust language integration
 Plug 'saecki/crates.nvim', { 'tag': 'stable' }
 Plug 'rust-lang/rust.vim'
 Plug 'mrcjkb/rustaceanvim'
-Plug 'numToStr/Comment.nvim'
-Plug 'stevearc/conform.nvim'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'brenoprata10/nvim-highlight-colors'
-Plug 'mfussenegger/nvim-dap'
-Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
-Plug 'wintermute-cell/gitignore.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'andweeb/presence.nvim'
+
+" Typst language support
 Plug 'chomosuke/typst-preview.nvim', {'tag': 'v0.3.*', 'do': ':TypstPreviewUpdate'}
+
+" LaTeX language support
 Plug 'lervag/vimtex'
-Plug 'romgrk/barbar.nvim'
+
+"""""""""""""""""""""""
+""" EDITOR BEHAVIOR """
+"""""""""""""""""""""""
+" Autopairs
+Plug 'windwp/nvim-autopairs'
+
+" Comment toggling
+Plug 'numToStr/Comment.nvim'
+
+" Format on save
+Plug 'stevearc/conform.nvim'
+
+" autoclose html tags
 Plug 'windwp/nvim-ts-autotag'
 call plug#end()
