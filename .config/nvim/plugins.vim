@@ -47,6 +47,10 @@ Plug 'wintermute-cell/gitignore.nvim'
 " Discord RPC
 Plug 'andweeb/presence.nvim'
 
+" Testing
+Plug 'klen/nvim-test'
+Plug 'andythigpen/nvim-coverage'
+
 """""""""""""""""""""""""
 """ EDITOR APPEARANCE """
 """""""""""""""""""""""""
