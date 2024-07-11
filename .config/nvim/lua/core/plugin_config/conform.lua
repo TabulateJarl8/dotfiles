@@ -1,19 +1,12 @@
-local prettier = function(bufnr)
-	if require("conform").get_formatter_info("prettier", bufnr).available then
-		return { "prettier" }
-	else
-		return {}
-	end
-end
-
 require("conform").setup({
 	formatters_by_ft = {
 		lua = { "stylua" },
 		python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
-		javascript = prettier,
-		typescript = prettier,
-		vue = prettier,
+		javascript = { "biome" },
+		typescript = { "biome" },
+		vue = { "prettier" },
 		c = { "clang-format" },
+		["_"] = { "trim_whitespace" },
 	},
 	-- dont format certain directories
 	format_on_save = function(bufnr)
@@ -24,3 +17,7 @@ require("conform").setup({
 		return { timeout_ms = 500, lsp_fallback = true }
 	end,
 })
+
+require("conform").formatters.prettier = {
+	prepend_args = { "--vue-indent-script-and-style" },
+}

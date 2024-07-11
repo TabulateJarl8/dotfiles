@@ -89,6 +89,7 @@ Plug 'numToStr/Comment.nvim'
 
 " Format on save
 Plug 'stevearc/conform.nvim'
+Plug 'zapling/mason-conform.nvim'
 
 " autoclose html tags
 Plug 'windwp/nvim-ts-autotag'
