@@ -101,4 +101,7 @@ Plug 'zapling/mason-conform.nvim'
 
 " autoclose html tags
 Plug 'windwp/nvim-ts-autotag'
+
+" Surrounding pairs helpers
+Plug 'kylechui/nvim-surround'
 call plug#end()
