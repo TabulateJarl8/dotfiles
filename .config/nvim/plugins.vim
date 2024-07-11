@@ -104,4 +104,7 @@ Plug 'windwp/nvim-ts-autotag'
 
 " Surrounding pairs helpers
 Plug 'kylechui/nvim-surround'
+
+" Autodetect indentation type/level
+Plug 'tpope/vim-sleuth'
 call plug#end()
