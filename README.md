@@ -15,5 +15,5 @@ stow .
 
 Install Arch dependencies:
 ```sh
-sudo pacman -Sy lldb ripgrep git latexmk biber --needed
+sudo pacman -Sy ripgrep git latexmk biber --needed
 ```
