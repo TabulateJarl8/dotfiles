@@ -11,6 +11,7 @@ call plug#begin(stdpath('config').'/autoload/plugged')
 " dependencies
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-neotest/nvim-nio'
 
 """""""""""""""""""""""
 """ EDITOR FEATURES """
@@ -71,6 +72,9 @@ Plug 'romgrk/barbar.nvim'
 
 " TODO highlighting
 Plug 'folke/todo-comments.nvim'
+
+" DAP UI
+Plug 'rcarriga/nvim-dap-ui'
 
 """""""""""""""""""""""""""""""""
 """ LANGUAGE SPECIFIC PLUGINS """

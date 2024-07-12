@@ -57,15 +57,18 @@ end)
 vim.keymap.set("n", "<F8>", function()
 	require("dap").step_out()
 end)
+vim.keymap.set("n", "<F9>", function()
+	require("dap").step_back()
+end)
+vim.keymap.set("n", "<F10>", function()
+	require("dap").restart()
+end)
+vim.keymap.set("n", "<F11>", function()
+	require("dap").close()
+end)
 vim.keymap.set("n", "<Leader>b", function()
 	require("dap").toggle_breakpoint()
 end)
-vim.keymap.set("n", "<Leader>B", function()
-	require("dap").set_breakpoint()
-end)
-local widgets = require("dap.ui.widgets")
-local sidebar = widgets.sidebar(widgets.scopes)
-vim.keymap.set("n", "<leader>ds", sidebar.open)
 
 -- comment inserting
 local comment = require("Comment.api")
@@ -101,3 +104,9 @@ vim.api.nvim_set_keymap("n", "<A-x>", "<Cmd>BufferCloseAllButCurrentOrPinned<CR>
 vim.api.nvim_set_keymap("n", "<A-l>", "<Cmd>BufferPick<CR>", opts)
 
 vim.api.nvim_set_keymap("n", "<Leader><Space>", "<Cmd>Telescope buffers<CR>", opts)
+
+-- multiline cursors
+vim.api.nvim_set_var("VM_maps", {
+	["Find Under"] = "<C-d>", -- replace C-n
+	["Find Subword Under"] = "<C-d>", -- replace visual C-n
+})
