@@ -107,4 +107,7 @@ Plug 'kylechui/nvim-surround'
 
 " Autodetect indentation type/level
 Plug 'tpope/vim-sleuth'
+
+" Multiline cursors
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 call plug#end()
