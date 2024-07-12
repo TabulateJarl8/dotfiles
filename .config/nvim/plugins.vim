@@ -36,7 +36,7 @@ Plug 'jay-babu/mason-nvim-dap.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 " Telescope
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.6' }
+Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
 
 " Documentation generator
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }

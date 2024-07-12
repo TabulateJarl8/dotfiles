@@ -1,5 +1,4 @@
-local dap = require("dap")
-require("mason").setup()
+-- local dap = require("dap")
 require("mason-nvim-dap").setup({
 	ensure_installed = { "codelldb" },
 	automatic_installation = true,
