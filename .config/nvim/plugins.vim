@@ -52,6 +52,9 @@ Plug 'andweeb/presence.nvim'
 Plug 'klen/nvim-test'
 Plug 'andythigpen/nvim-coverage'
 
+" Wakatime metrics
+Plug 'wakatime/vim-wakatime'
+
 """""""""""""""""""""""""
 """ EDITOR APPEARANCE """
 """""""""""""""""""""""""
