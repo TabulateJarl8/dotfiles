@@ -9,6 +9,7 @@ require("nvim-treesitter.configs").setup({
 		"rust",
 		"python",
 		"javascript",
+		"typescript",
 		"java",
 		"markdown",
 		"markdown_inline",
