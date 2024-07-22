@@ -5,6 +5,12 @@ require("mason-nvim-dap").setup({
 	handlers = {},
 })
 
+require("dap")
+
+vim.api.nvim_set_hl(0, "DapStopped", { ctermbg = 0, bg = "#444a57" })
+vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "DapBreakpoint", linehl = "", numhl = "" })
+vim.fn.sign_define("DapStopped", { text = "", texthl = "DapStopped", linehl = "DapStopped", numhl = "DapStopped" })
+
 -- dap.adapters.lldb = {
 -- 	type = "executable",
 -- 	command = "/usr/bin/lldb-vscode",
