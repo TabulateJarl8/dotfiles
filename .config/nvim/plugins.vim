@@ -79,6 +79,9 @@ Plug 'folke/todo-comments.nvim'
 " DAP UI
 Plug 'rcarriga/nvim-dap-ui'
 
+" LSP Config progress indicator
+Plug 'linrongbin16/lsp-progress.nvim'
+
 """""""""""""""""""""""""""""""""
 """ LANGUAGE SPECIFIC PLUGINS """
 """""""""""""""""""""""""""""""""
