@@ -18,6 +18,10 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.signcolumn = "yes"
 
+-- ignore case in searches
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+
 -- arrow key wrap on ends
 vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, ["["] = true, ["]"] = true })
 
