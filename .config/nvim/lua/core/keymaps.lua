@@ -19,6 +19,9 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "-", "<C-x>")
 
+-- select all
+vim.keymap.set("n", "<C-a>", "gg<S-v>G")
+
 -- make ctrl+del work in insert mode
 vim.api.nvim_set_keymap("i", "<C-Del>", "<C-o>dw", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true, silent = true })
