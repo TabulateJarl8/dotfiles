@@ -85,7 +85,7 @@ cmp.setup.cmdline(":", {
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 local on_attach = function(_, bufnr)
-	vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
+	-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 	vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 	vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, {})
 

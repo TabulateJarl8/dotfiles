@@ -82,6 +82,9 @@ Plug 'rcarriga/nvim-dap-ui'
 " LSP Config progress indicator
 Plug 'linrongbin16/lsp-progress.nvim'
 
+" Incremental Rename
+Plug 'smjonas/inc-rename.nvim'
+
 """""""""""""""""""""""""""""""""
 """ LANGUAGE SPECIFIC PLUGINS """
 """""""""""""""""""""""""""""""""

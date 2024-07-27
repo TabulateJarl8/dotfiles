@@ -19,6 +19,9 @@ vim.keymap.set("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 vim.keymap.set("n", "+", "<C-a>")
 vim.keymap.set("n", "-", "<C-x>")
 
+-- inc rename
+vim.keymap.set("n", "<leader>rn", ":IncRename ")
+
 -- select all
 vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
