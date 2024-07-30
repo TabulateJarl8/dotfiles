@@ -1,3 +1,7 @@
+local custom_filename = require("lualine.components.filename"):extend()
+custom_filename.apply_icon = require("lualine.components.filetype").apply_icon
+custom_filename.icon_hl_cache = {}
+
 require("lualine").setup({
 	options = {
 		theme = "catppuccin",
@@ -5,7 +9,7 @@ require("lualine").setup({
 	sections = {
 		lualine_a = { "mode" },
 		lualine_b = {},
-		lualine_c = { "filename" },
+		lualine_c = { { custom_filename, colored = true } },
 		lualine_x = {
 			{ -- Setup lsp-progress component
 				function()
