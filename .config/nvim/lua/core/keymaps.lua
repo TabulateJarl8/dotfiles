@@ -83,6 +83,9 @@ vim.keymap.set("n", "<Leader>b", function()
 	require("dap").toggle_breakpoint()
 end)
 
+-- Silicon code image generation
+vim.keymap.set("x", "<leader>SS", ":Silicon<CR>", { noremap = true, silent = true })
+
 -- comment inserting
 local comment = require("Comment.api")
 vim.keymap.set("n", "<leader>/", comment.toggle.linewise.current)
