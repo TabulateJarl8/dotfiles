@@ -6,6 +6,7 @@ require("conform").setup({
 		typescript = { "biome" },
 		vue = { "prettier" },
 		c = { "clang-format" },
+		markdown = { "prettier" },
 		["_"] = { "trim_whitespace" },
 	},
 	-- dont format certain directories
