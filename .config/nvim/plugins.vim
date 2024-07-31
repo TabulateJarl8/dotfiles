@@ -58,6 +58,9 @@ Plug 'wakatime/vim-wakatime'
 " Silicon code image generation
 Plug 'krivahtoo/silicon.nvim', { 'do': './install.sh' }
 
+" Marp integration
+Plug 'mpas/marp-nvim'
+
 """""""""""""""""""""""""
 """ EDITOR APPEARANCE """
 """""""""""""""""""""""""
