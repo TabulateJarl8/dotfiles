@@ -1,4 +1,9 @@
-require("mason").setup()
+require("mason").setup({
+	registries = {
+		"github:nvim-java/mason-registry",
+		"github:mason-org/mason-registry",
+	},
+})
 require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",
@@ -133,7 +138,7 @@ lspconfig.tsserver.setup({
 lspconfig.volar.setup({ on_attach = on_attach, capabilities = capabilities })
 
 lspconfig.pyright.setup({ on_attach = on_attach, capabilities = capabilities })
-lspconfig.jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
+-- lspconfig.jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.clangd.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.asm_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.html.setup({ on_attach = on_attach, capabilities = capabilities })
@@ -141,3 +146,13 @@ lspconfig.cssmodules_ls.setup({ on_attach = on_attach, capabilities = capabiliti
 lspconfig.css_variables.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.cssls.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.jsonls.setup({ on_attach = on_attach, capabilities = capabilities })
+
+require("java").setup({
+	spring_boot_tools = {
+		enable = false,
+	},
+	jdk = {
+		auto_install = false,
+	},
+})
+lspconfig.jdtls.setup({ on_attach = on_attach, capabilities = capabilities })

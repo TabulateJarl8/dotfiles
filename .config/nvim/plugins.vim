@@ -19,6 +19,15 @@ Plug 'nvim-neotest/nvim-nio'
 " nvim-tree file manager
 Plug 'nvim-tree/nvim-tree.lua'
 
+" Java support
+Plug 'nvim-java/nvim-java'
+Plug 'nvim-java/lua-async-await'
+Plug 'nvim-java/nvim-java-refactor'
+Plug 'nvim-java/nvim-java-core'
+Plug 'nvim-java/nvim-java-test'
+Plug 'nvim-java/nvim-java-dap'
+Plug 'MunifTanjim/nui.nvim'
+
 " LSP integration
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
