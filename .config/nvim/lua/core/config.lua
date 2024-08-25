@@ -17,7 +17,6 @@ vim.o.number = true
 vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.signcolumn = "yes"
-vim.o.colorcolumn = "80"
 
 -- ignore case in searches
 vim.opt.ignorecase = true
