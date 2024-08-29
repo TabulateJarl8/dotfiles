@@ -154,6 +154,18 @@ require("java").setup({
 	jdk = {
 		auto_install = false,
 	},
+	root_markers = {
+		".javaroot",
+		"settings.gradle",
+		"settings.gradle.kts",
+		"pom.xml",
+		"build.gradle",
+		"mvnw",
+		"gradlew",
+		"build.gradle",
+		"build.gradle.kts",
+		".git",
+	},
 })
 lspconfig.jdtls.setup({
 	on_attach = on_attach,
