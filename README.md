@@ -16,7 +16,7 @@ stow .
 Install Arch dependencies:
 
 ```sh
-sudo pacman -Sy ripgrep git latexmk biber --needed
+sudo pacman -Sy ripgrep git texlive biber --needed
 ```
 
 Optionally, install the following AUR dependencies:
