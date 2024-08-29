@@ -100,6 +100,9 @@ Plug 'linrongbin16/lsp-progress.nvim'
 " Incremental Rename
 Plug 'smjonas/inc-rename.nvim'
 
+" COBOL
+Plug 'Jorengarenar/COBOl.vim'
+
 """""""""""""""""""""""""""""""""
 """ LANGUAGE SPECIFIC PLUGINS """
 """""""""""""""""""""""""""""""""

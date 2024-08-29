@@ -7,15 +7,16 @@ require("conform").setup({
 		vue = { "prettier" },
 		c = { "clang-format" },
 		markdown = { "prettier" },
+		java = { "google-java-format" },
 		["_"] = { "trim_whitespace" },
 	},
 	-- dont format certain directories
-	format_on_save = function(bufnr)
+	format_after_save = function(bufnr)
 		local bufname = vim.api.nvim_buf_get_name(bufnr)
 		if bufname:match("/qmk_firmware/") then
 			return
 		end
-		return { timeout_ms = 500, lsp_fallback = true }
+		return { lsp_fallback = true } --timeout_ms = 500, lsp_fallback = true }
 	end,
 })
 

@@ -155,4 +155,36 @@ require("java").setup({
 		auto_install = false,
 	},
 })
-lspconfig.jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.jdtls.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	settings = {
+		java = {
+			-- format = {
+			-- 	settings = {
+			-- 		url = "/home/tabulate/school/sophomore/sem1/cs240/.vscode/eclipse-java-google-style.xml",
+			-- 		profile = "GoogleStyle",
+			-- 	},
+			-- },
+			project = {
+				referencedLibraries = {
+					"lib/**/*.jar",
+				},
+				sourcePaths = {
+					"src",
+				},
+				outputPath = "bin",
+			},
+			debug = {
+				settings = {
+					stepping = {
+						skipClasses = {
+							"$JDK",
+							"$Libraries",
+						},
+					},
+				},
+			},
+		},
+	},
+})
