@@ -8,6 +8,7 @@ require("conform").setup({
 		c = { "clang-format" },
 		markdown = { "prettier" },
 		java = { "google-java-format" },
+		latex = { "latexindent" },
 		["_"] = { "trim_whitespace" },
 	},
 	-- dont format certain directories

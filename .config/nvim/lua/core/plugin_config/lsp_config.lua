@@ -19,6 +19,7 @@ require("mason-lspconfig").setup({
 		"css_variables",
 		"cssls",
 		"jsonls",
+		"texlab",
 	},
 })
 
@@ -146,6 +147,7 @@ lspconfig.cssmodules_ls.setup({ on_attach = on_attach, capabilities = capabiliti
 lspconfig.css_variables.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.cssls.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.jsonls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.texlab.setup({ on_attach = on_attach, capabilities = capabilities })
 
 require("java").setup({
 	spring_boot_tools = {
