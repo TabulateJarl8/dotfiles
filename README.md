@@ -16,7 +16,7 @@ stow .
 Install Arch dependencies:
 
 ```sh
-sudo pacman -Sy ripgrep git texlive biber --needed
+sudo pacman -Sy ripgrep git texlive biber python-pygments --needed
 ```
 
 Optionally, install the following AUR dependencies:
