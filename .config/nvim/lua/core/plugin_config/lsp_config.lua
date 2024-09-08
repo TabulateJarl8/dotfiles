@@ -12,7 +12,7 @@ require("mason-lspconfig").setup({
 		"jdtls",
 		"clangd",
 		"volar",
-		"tsserver",
+		"ts_ls",
 		"asm_lsp",
 		"html",
 		"cssmodules_ls",
@@ -130,7 +130,7 @@ lspconfig.lua_ls.setup({
 
 local vue_lsp_path = require("mason-registry").get_package("vue-language-server"):get_install_path()
 	.. "/node_modules/@vue/language-server"
-lspconfig.tsserver.setup({
+lspconfig.ts_ls.setup({
 	on_attach = on_attach,
 	capabilities = capabilities,
 	init_options = { plugins = { { name = "@vue/typescript-plugin", location = vue_lsp_path, languages = { "vue" } } } },

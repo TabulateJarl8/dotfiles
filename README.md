@@ -24,3 +24,9 @@ Optionally, install the following AUR dependencies:
 ```sh
 paru -S marp-cli-bin
 ```
+
+On first launch of nvim, rebuild the silicon themes:
+
+```
+:lua require('silicon').rebuild_themes()
+```
