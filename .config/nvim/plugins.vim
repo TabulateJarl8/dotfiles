@@ -12,6 +12,7 @@ call plug#begin(stdpath('config').'/autoload/plugged')
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-neotest/nvim-nio'
+Plug 'antoinemadec/FixCursorHold.nvim'
 
 """""""""""""""""""""""
 """ EDITOR FEATURES """
@@ -58,7 +59,9 @@ Plug 'wintermute-cell/gitignore.nvim'
 Plug 'andweeb/presence.nvim'
 
 " Testing
-Plug 'klen/nvim-test'
+Plug 'nvim-neotest/neotest'
+Plug 'nvim-neotest/neotest-python'
+
 Plug 'andythigpen/nvim-coverage'
 
 " Wakatime metrics
