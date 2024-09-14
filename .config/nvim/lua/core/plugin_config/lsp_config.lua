@@ -20,6 +20,7 @@ require("mason-lspconfig").setup({
 		"cssls",
 		"jsonls",
 		"texlab",
+		"taplo",
 	},
 })
 
@@ -97,7 +98,7 @@ local on_attach = function(_, bufnr)
 
 	vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 	vim.keymap.set("n", "gi", vim.lsp.buf.implementation, {})
-	vim.keymap.set("n", "gr", require("telescope.builtin").lsp_references, {})
+	vim.keymap.set("n", "gu", require("telescope.builtin").lsp_references, {})
 	vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 
 	-- inline type hints
@@ -148,6 +149,7 @@ lspconfig.css_variables.setup({ on_attach = on_attach, capabilities = capabiliti
 lspconfig.cssls.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.jsonls.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.texlab.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.taplo.setup({ on_attach = on_attach, capabilities = capabilities })
 
 require("java").setup({
 	spring_boot_tools = {
