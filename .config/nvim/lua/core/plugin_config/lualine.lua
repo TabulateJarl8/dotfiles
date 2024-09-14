@@ -8,7 +8,7 @@ require("lualine").setup({
 	},
 	sections = {
 		lualine_a = { "mode" },
-		lualine_b = {},
+		lualine_b = { "branch", "diff" },
 		lualine_c = { { custom_filename, colored = true } },
 		lualine_x = {
 			{ -- Setup lsp-progress component
