@@ -120,6 +120,9 @@ Plug 'chomosuke/typst-preview.nvim', {'tag': 'v0.3.*', 'do': ':TypstPreviewUpdat
 " LaTeX language support
 Plug 'lervag/vimtex'
 
+" Hugo template highlighting
+Plug 'phelipetls/vim-hugo'
+
 """""""""""""""""""""""
 """ EDITOR BEHAVIOR """
 """""""""""""""""""""""
