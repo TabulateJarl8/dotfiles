@@ -43,6 +43,10 @@ Plug 'hrsh7th/vim-vsnip'
 Plug 'mfussenegger/nvim-dap'
 Plug 'jay-babu/mason-nvim-dap.nvim'
 
+" Linting
+Plug 'mfussenegger/nvim-lint'
+Plug 'rshkarin/mason-nvim-lint'
+
 " Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
