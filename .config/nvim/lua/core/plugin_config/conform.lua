@@ -9,6 +9,7 @@ require("conform").setup({
 		markdown = { "prettier" },
 		java = { "google-java-format" },
 		latex = { "latexindent" },
+		bash = { "shfmt" },
 		["_"] = { "trim_whitespace" },
 	},
 	-- dont format certain directories
