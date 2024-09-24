@@ -5,6 +5,8 @@ require("conform").setup({
 		javascript = { "biome" },
 		typescript = { "biome" },
 		vue = { "prettier" },
+		html = { "prettier" },
+		htmlhugo = { "prettier" },
 		c = { "clang-format" },
 		markdown = { "prettier" },
 		java = { "google-java-format" },
