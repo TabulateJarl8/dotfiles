@@ -17,7 +17,11 @@ require("conform").setup({
 	-- dont format certain directories
 	format_after_save = function(bufnr)
 		local bufname = vim.api.nvim_buf_get_name(bufnr)
-		if bufname:match("/qmk_firmware/") or bufname:match("/csm/documentation/") then
+		if
+			bufname:match("/qmk_firmware/")
+			or bufname:match("/csm/documentation/")
+			or bufname:match("/webapp-deploy/documentation/")
+		then
 			return
 		end
 		return { lsp_fallback = true } --timeout_ms = 500, lsp_fallback = true }
