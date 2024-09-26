@@ -135,6 +135,7 @@ Plug 'windwp/nvim-autopairs'
 
 " Comment toggling
 Plug 'numToStr/Comment.nvim'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " Format on save
 Plug 'stevearc/conform.nvim'
