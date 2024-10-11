@@ -110,6 +110,9 @@ Plug 'smjonas/inc-rename.nvim'
 " COBOL
 Plug 'Jorengarenar/COBOl.vim'
 
+" Telescope code actions
+Plug 'aznhe21/actions-preview.nvim'
+
 """""""""""""""""""""""""""""""""
 """ LANGUAGE SPECIFIC PLUGINS """
 """""""""""""""""""""""""""""""""
