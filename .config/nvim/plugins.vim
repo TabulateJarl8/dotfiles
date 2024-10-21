@@ -42,6 +42,7 @@ Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'mfussenegger/nvim-dap'
 Plug 'jay-babu/mason-nvim-dap.nvim'
+Plug 'theHamsta/nvim-dap-virtual-text'
 
 " Linting
 Plug 'mfussenegger/nvim-lint'
@@ -76,6 +77,9 @@ Plug 'krivahtoo/silicon.nvim', { 'do': './install.sh' }
 
 " Marp integration
 Plug 'mpas/marp-nvim'
+
+" Better find/replace
+Plug 'chrisgrieser/nvim-rip-substitute'
 
 """""""""""""""""""""""""
 """ EDITOR APPEARANCE """
@@ -155,4 +159,7 @@ Plug 'tpope/vim-sleuth'
 
 " Multiline cursors
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+
+" Image pasting support
+Plug 'HakonHarnes/img-clip.nvim'
 call plug#end()

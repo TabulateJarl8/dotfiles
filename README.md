@@ -19,6 +19,8 @@ Install Arch dependencies:
 sudo pacman -Sy ripgrep git texlive biber python-pygments --needed
 ```
 
+If running X11, install `xclip`, if running wayland, install `wl-clipboard`.
+
 Optionally, install the following AUR dependencies:
 
 ```sh
