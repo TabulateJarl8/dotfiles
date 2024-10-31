@@ -1,6 +1,7 @@
 require("lint").linters_by_ft = {
 	java = { "checkstyle" },
 	python = { "ruff" },
+	vue = { "eslint_d" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
