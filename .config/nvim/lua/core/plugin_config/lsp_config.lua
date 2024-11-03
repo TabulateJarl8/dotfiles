@@ -22,6 +22,7 @@ require("mason-lspconfig").setup({
 		"texlab",
 		"taplo",
 		"bashls",
+		"typst_lsp",
 	},
 })
 
@@ -153,6 +154,7 @@ lspconfig.jsonls.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.texlab.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.taplo.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.bashls.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.typst_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
 
 require("java").setup({
 	spring_boot_tools = {
