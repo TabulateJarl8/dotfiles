@@ -16,7 +16,7 @@ stow .
 Install Arch dependencies:
 
 ```sh
-sudo pacman -Sy ripgrep git texlive biber python-pygments --needed
+sudo pacman -Sy ripgrep git texlive biber python-pygments --needed fd
 ```
 
 If running X11, install `xclip`, if running wayland, install `wl-clipboard`.

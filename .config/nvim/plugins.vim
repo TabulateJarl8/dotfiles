@@ -44,6 +44,9 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'jay-babu/mason-nvim-dap.nvim'
 Plug 'theHamsta/nvim-dap-virtual-text'
 
+" Venv selection
+Plug 'linux-cultist/venv-selector.nvim', { 'branch': 'regexp' }
+
 " Linting
 Plug 'mfussenegger/nvim-lint'
 Plug 'rshkarin/mason-nvim-lint'
