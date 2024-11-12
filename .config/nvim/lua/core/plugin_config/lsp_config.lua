@@ -8,7 +8,7 @@ require("mason-lspconfig").setup({
 	ensure_installed = {
 		"lua_ls",
 		"rust_analyzer",
-		"pyright",
+		"basedpyright",
 		"jdtls",
 		"clangd",
 		"volar",
@@ -142,7 +142,7 @@ lspconfig.ts_ls.setup({
 })
 lspconfig.volar.setup({ on_attach = on_attach, capabilities = capabilities })
 
-lspconfig.pyright.setup({ on_attach = on_attach, capabilities = capabilities })
+lspconfig.basedpyright.setup({ on_attach = on_attach, capabilities = capabilities })
 -- lspconfig.jdtls.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.clangd.setup({ on_attach = on_attach, capabilities = capabilities })
 lspconfig.asm_lsp.setup({ on_attach = on_attach, capabilities = capabilities })
