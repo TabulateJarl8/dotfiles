@@ -111,6 +111,9 @@ Plug 'rcarriga/nvim-dap-ui'
 " LSP Config progress indicator
 Plug 'linrongbin16/lsp-progress.nvim'
 
+" LSP autocomplete pictograms
+Plug 'onsails/lspkind.nvim'
+
 " Incremental Rename
 Plug 'smjonas/inc-rename.nvim'
 

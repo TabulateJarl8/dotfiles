@@ -61,6 +61,17 @@ cmp.setup({
 	}, {
 		{ name = "buffer" },
 	}),
+	formatting = {
+		format = require('lspkind').cmp_format({
+			mode = "symbol_text",
+			maxwidth = {
+				menu = 50,
+				abbr = 50,
+			},
+			ellipsis_char = "...",
+			show_labelDetails = true,
+		}),
+	},
 })
 -- To use git you need to install the plugin petertriho/cmp-git and uncomment lines below
 -- Set configuration for specific filetype.
