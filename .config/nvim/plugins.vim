@@ -81,9 +81,6 @@ Plug 'krivahtoo/silicon.nvim', { 'do': './install.sh' }
 " Marp integration
 Plug 'mpas/marp-nvim'
 
-" Better find/replace
-Plug 'chrisgrieser/nvim-rip-substitute'
-
 """""""""""""""""""""""""
 """ EDITOR APPEARANCE """
 """""""""""""""""""""""""
@@ -168,4 +165,7 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 " Image pasting support
 Plug 'HakonHarnes/img-clip.nvim'
+
+" Easy clipboard handling
+Plug 'AckslD/nvim-neoclip.lua'
 call plug#end()

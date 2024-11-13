@@ -29,13 +29,11 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 vim.api.nvim_set_keymap("i", "<C-Del>", "<C-o>dw", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true, silent = true })
 
-vim.keymap.set({ "n", "x" }, "<leader>fr", function()
-	require("rip-substitute").sub()
-end, { desc = "rip substitute" })
-vim.keymap.set({ "v" }, "<leader>fr", ":RipSubstitute<cr>")
-
 -- make escape in normal mode clear highlighting
 vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true })
+
+-- clipboard management
+vim.api.nvim_set_keymap("n", "<C-c>", ":Telescope neoclip<CR>", { noremap = true, silent = true })
 
 -- insert a blank line below and above your cursor without going into insert mode
 vim.keymap.set(
