@@ -16,6 +16,7 @@ return {
 				gitsigns = true,
 				neotest = true,
 				cmp = true,
+				lsp_trouble = true,
 			},
 		},
 		config = function(_, opts)
