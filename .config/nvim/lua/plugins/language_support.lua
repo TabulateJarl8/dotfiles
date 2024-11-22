@@ -35,11 +35,13 @@ return {
 	-- Hugo html template support
 	{
 		"phelipetls/vim-hugo",
+		ft = "htmlhugo",
 	},
 	-- Marp server support
 	{
 		"mpas/marp-nvim",
 		opts = {},
+		cmd = { "MarpStart", "MarpStop", "MarpStatus", "MarpToggle" },
 	},
 	-- Python venv selection
 	{

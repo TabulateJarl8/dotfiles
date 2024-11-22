@@ -33,5 +33,15 @@ return {
 		"andythigpen/nvim-coverage",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		opts = { comamnds = true },
+		cmd = {
+			"Coverage",
+			"CoverageHide",
+			"CoverageLoad",
+			"CoverageShow",
+			"CoverageClear",
+			"CoverageToggle",
+			"CoverageSummary",
+			"CoverageLoadLcov",
+		},
 	},
 }

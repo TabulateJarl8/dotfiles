@@ -21,6 +21,7 @@ return {
 				return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.")
 			end,
 		},
+		cmd = { "Silicon" },
 	},
 	-- gitignore downloader
 	{
