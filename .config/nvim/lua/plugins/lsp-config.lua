@@ -61,6 +61,11 @@ return {
 		version = "^5", -- Recommended
 		lazy = false, -- This plugin is already lazy
 	},
+	{
+		"folke/lazydev.nvim",
+		ft = "lua", -- only load on lua files
+		opts = {},
+	},
 	-- completition library
 	{
 		"hrsh7th/nvim-cmp",
@@ -99,6 +104,10 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "vsnip" }, -- For vsnip users.
 					{ name = "crates" },
+					{
+						name = "lazydev",
+						group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+					},
 				}, {
 					{ name = "buffer" },
 				}),
@@ -176,6 +185,7 @@ return {
 				"taplo",
 				"bashls",
 				"typst_lsp",
+				"lua_ls",
 			}
 
 			-- setup servers that just have the default config
@@ -197,13 +207,6 @@ return {
 					},
 				}
 			end
-
-			-- Lua LS
-			lspconfig.lua_ls.setup({
-				on_attach = on_attach,
-				capabilities = capabilities,
-				settings = { Lua = { diagnostics = { globals = { "vim" } } } },
-			})
 
 			-- Add vue support to typescript
 			local vue_lsp_path = require("mason-registry").get_package("vue-language-server"):get_install_path()
