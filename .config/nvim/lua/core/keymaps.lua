@@ -1,6 +1,3 @@
--- Set leader character to space
-vim.g.mapleader = " "
-
 -- Yank to clipboard
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 
@@ -129,3 +126,6 @@ vim.api.nvim_set_var("VM_maps", {
 	["Find Under"] = "<C-d>", -- replace C-n
 	["Find Subword Under"] = "<C-d>", -- replace visual C-n
 })
+
+-- nvim-tree toggle
+vim.keymap.set("n", "<c-n>", ":NvimTreeFindFileToggle<CR>")
