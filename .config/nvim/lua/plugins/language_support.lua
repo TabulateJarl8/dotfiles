@@ -49,6 +49,16 @@ return {
 		},
 		lazy = false,
 		branch = "regexp",
-		opts = {},
+		opts = {
+			settings = {
+				options = {
+					enabled_cached_venvs = true,
+					cached_venv_automatic_activation = true,
+				},
+			},
+		},
+		keys = {
+			{ "<Leader>vs", "<cmd>VenvSelect<CR>" },
+		},
 	},
 }
