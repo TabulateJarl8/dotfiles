@@ -28,8 +28,31 @@ return {
 		dependencies = { "nvim-telescope/telescope.nvim" },
 		keys = {
 			vim.keymap.set("n", "<leader>gi", function()
-				require("gitignore").generate("./.gitignore")
+				require("gitignore").generate({ path = "./.gitignore" })
 			end),
+		},
+	},
+	-- project-wide diagnostics reference
+	{
+		"folke/trouble.nvim",
+		opts = {},
+		cmd = "Trouble",
+		keys = {
+			{
+				"<leader>xx",
+				"<cmd>Trouble diagnostics toggle<cr>",
+				desc = "Diagnostics (Trouble)",
+			},
+			{
+				"<leader>xX",
+				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
+				desc = "Buffer Diagnostics (Trouble)",
+			},
+			{
+				"<leader>xQ",
+				"<cmd>Trouble qflist toggle<cr>",
+				desc = "Quickfix List (Trouble)",
+			},
 		},
 	},
 }

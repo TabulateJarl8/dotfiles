@@ -13,6 +13,9 @@ return {
 				treesitter = true,
 				mason = true,
 				telescope = true,
+				gitsigns = true,
+				neotest = true,
+				cmp = true,
 			},
 		},
 		config = function(_, opts)
