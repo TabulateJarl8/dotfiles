@@ -1,6 +1,11 @@
 -- This file contains configuration for plugins related to debugging
 return {
 	-- debug adapter protocol for debugging
+	-- <<<<<<< HEAD (Current changes)
+	-- print("nuzzy")
+	-- =======
+	-- print("fuzzy")
+	-- >>>>>>> master (Incoming changes)
 	{
 		"mfussenegger/nvim-dap",
 		dependencies = { "williamboman/mason.nvim" },
