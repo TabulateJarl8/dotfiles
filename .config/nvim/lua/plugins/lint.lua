@@ -4,6 +4,7 @@ return {
 	{
 		"mfussenegger/nvim-lint",
 		dependencies = { "williamboman/mason.nvim" },
+		lazy = false,
 		config = function()
 			require("lint").linters_by_ft = {
 				java = { "checkstyle" },
