@@ -27,7 +27,7 @@ return {
 				"texlab",
 				"taplo",
 				"bashls",
-				"typst_lsp",
+				"tinymist",
 			},
 		},
 	},
@@ -184,7 +184,7 @@ return {
 				"texlab",
 				"taplo",
 				"bashls",
-				"typst_lsp",
+				"tinymist",
 				"lua_ls",
 			}
 

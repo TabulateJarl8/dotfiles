@@ -19,8 +19,11 @@ return {
 	{
 		"chomosuke/typst-preview.nvim",
 		version = "v1.*",
-		opts = {},
-		build = ":TypstPreviewUpdate",
+		ft = "typst",
+		opts = {
+			-- use mason installation of tinymist
+			dependencies_bin = { ["tinymist"] = "tinymist" },
+		},
 	},
 	-- LaTeX language support
 	{
