@@ -12,14 +12,14 @@ return {
 			"neovim/nvim-lspconfig",
 			-- Languages
 			"nvim-neotest/neotest-python",
-			"mrcjkb/rustaceanvim",
+			"rouge8/neotest-rust",
 		},
 		config = function()
 			-- lazy load due to issues with mason
 			-- https://github.com/nvim-neotest/neotest/discussions/455
 			require("neotest").setup({
 				adapters = {
-					require("rustaceanvim.neotest"),
+					require("neotest-rust"),
 					require("neotest-python")({
 						dap = { justMyCode = false },
 					}),
