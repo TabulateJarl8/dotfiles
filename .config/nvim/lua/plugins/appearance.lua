@@ -93,4 +93,10 @@ return {
 		"aznhe21/actions-preview.nvim",
 		dependencies = { "nvim-telescope/telescope.nvim" },
 	},
+	-- show keypresses
+	{
+		"NStefan002/screenkey.nvim",
+		lazy = false,
+		version = "*",
+	},
 }

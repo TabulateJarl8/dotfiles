@@ -14,6 +14,7 @@ return {
 				javascript = { "biome" },
 				typescript = { "biome" },
 				vue = { "prettier" },
+				svg = { "prettier" },
 				html = { "prettier" },
 				htmlhugo = { "prettier" },
 				c = { "clang-format" },
