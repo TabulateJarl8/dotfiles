@@ -14,5 +14,5 @@
 [safe]
 	directory = /opt/flutter
 
-[includeIf "gitdir:~/school/sophomore/sem2/cs361/"]
+[includeIf "gitdir:~/src/cs361/"]
 	path = ~/school/sophomore/sem2/cs361/.gitconfig.school
