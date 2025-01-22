@@ -184,7 +184,6 @@ return {
 				"texlab",
 				"taplo",
 				"bashls",
-				"tinymist",
 				"lua_ls",
 			}
 
@@ -228,6 +227,14 @@ return {
 					plugins = { { name = "@vue/typescript-plugin", location = vue_lsp_path, languages = { "vue" } } },
 				},
 				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
+			})
+
+			lspconfig.tinymist.setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+				settings = {
+					formatterMode = "typstyle",
+				},
 			})
 
 			-- Java LS support
