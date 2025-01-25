@@ -9,6 +9,9 @@ vim.o.signcolumn = "yes"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
+-- current line highlighting
+vim.opt.cursorline = true
+
 -- arrow key wrap on ends
 vim.opt.whichwrap:append({ ["<"] = true, [">"] = true, ["["] = true, ["]"] = true })
 
