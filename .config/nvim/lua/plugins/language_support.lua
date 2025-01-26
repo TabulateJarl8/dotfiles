@@ -66,4 +66,9 @@ return {
 			{ "<Leader>vs", "<cmd>VenvSelect<CR>" },
 		},
 	},
+	-- textual tcss highlighting
+	{
+		"cachebag/nvim-tcss",
+		config = true,
+	},
 }

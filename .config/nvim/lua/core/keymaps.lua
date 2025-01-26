@@ -46,14 +46,6 @@ vim.keymap.set(
 	{ noremap = true, silent = true }
 )
 
--- autocommand to set the file type to scss for tcss
-vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
-	pattern = { "*.tcss" },
-	callback = function()
-		vim.cmd("set filetype=scss")
-	end,
-})
-
 -- debugging
 vim.keymap.set("n", "<F5>", function()
 	require("dap").continue()
