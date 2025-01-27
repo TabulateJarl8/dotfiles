@@ -10,6 +10,8 @@ return {
 				java = { "checkstyle" },
 				python = { "ruff" },
 				vue = { "eslint_d" },
+				typescriptreact = { "biomejs" },
+				javascriptreact = { "biomejs" },
 			}
 
 			vim.api.nvim_create_autocmd({ "BufWritePost" }, {

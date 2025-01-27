@@ -13,6 +13,8 @@ return {
 				python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
 				javascript = { "biome" },
 				typescript = { "biome" },
+				typescriptreact = { "biome" },
+				javascriptreact = { "biome" },
 				vue = { "prettier" },
 				svg = { "prettier" },
 				html = { "prettier" },
