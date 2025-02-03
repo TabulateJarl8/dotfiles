@@ -24,7 +24,9 @@ return {
 		end,
 	},
 	{
-		"rshkarin/mason-nvim-lint",
+		-- TODO: change this back once https://github.com/rshkarin/mason-nvim-lint/pull/20 is merged
+		"TabulateJarl8/mason-nvim-lint",
+		branch = "patch-1",
 		lazy = false,
 		dependencies = { "mfussenegger/nvim-lint" },
 		opts = {},

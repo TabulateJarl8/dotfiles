@@ -28,6 +28,7 @@ return {
 				"taplo",
 				"bashls",
 				"tinymist",
+				"gopls",
 			},
 		},
 	},
@@ -185,6 +186,7 @@ return {
 				"taplo",
 				"bashls",
 				"lua_ls",
+				"gopls",
 			}
 
 			-- setup servers that just have the default config
