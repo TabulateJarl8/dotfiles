@@ -18,7 +18,7 @@ return {
 	-- Typst live preview
 	{
 		"chomosuke/typst-preview.nvim",
-		version = "v1.*",
+		version = "1.*",
 		ft = "typst",
 		opts = {
 			-- use mason installation of tinymist

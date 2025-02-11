@@ -21,7 +21,7 @@ return {
 				return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.")
 			end,
 		},
-		cmd = { "Silicon" },
+		lazy = false,
 	},
 	-- gitignore downloader
 	{
@@ -31,29 +31,6 @@ return {
 			vim.keymap.set("n", "<leader>gi", function()
 				require("gitignore").generate({ path = "./.gitignore" })
 			end),
-		},
-	},
-	-- project-wide diagnostics reference
-	{
-		"folke/trouble.nvim",
-		opts = {},
-		cmd = "Trouble",
-		keys = {
-			{
-				"<leader>xx",
-				"<cmd>Trouble diagnostics toggle<cr>",
-				desc = "Diagnostics (Trouble)",
-			},
-			{
-				"<leader>xX",
-				"<cmd>Trouble diagnostics toggle filter.buf=0<cr>",
-				desc = "Buffer Diagnostics (Trouble)",
-			},
-			{
-				"<leader>xQ",
-				"<cmd>Trouble qflist toggle<cr>",
-				desc = "Quickfix List (Trouble)",
-			},
 		},
 	},
 	{
