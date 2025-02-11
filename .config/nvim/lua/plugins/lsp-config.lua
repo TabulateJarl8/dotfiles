@@ -75,7 +75,6 @@ return {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
-			"f3fora/cmp-spell",
 			"hrsh7th/cmp-vsnip",
 			"hrsh7th/vim-vsnip",
 			"onsails/lspkind.nvim",
@@ -106,14 +105,6 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "vsnip" }, -- For vsnip users.
 					{ name = "crates" },
-					{
-						name = "spell",
-						option = {
-							enable_in_context = function()
-								return require("cmp.config.context").in_treesitter_capture("spell")
-							end,
-						},
-					},
 					{
 						name = "lazydev",
 						group_index = 0, -- set group index to 0 to skip loading LuaLS completions
