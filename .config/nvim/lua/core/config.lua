@@ -42,3 +42,13 @@ vim.opt.listchars = {
 	extends = ">",
 	leadmultispace = "·",
 }
+
+-- spellcheck
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = { "markdown", "text", "typst" },
+	callback = function()
+		vim.opt_local.spell = true
+		-- vim.opt_local.spellfile = vim.fn.expand("$HOME/.config/nvim/en.utf-8.add")
+		vim.opt_local.spelllang = "en_us"
+	end,
+})
