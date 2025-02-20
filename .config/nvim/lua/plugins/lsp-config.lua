@@ -29,6 +29,7 @@ return {
 				"bashls",
 				"tinymist",
 				"gopls",
+				"gitlab_ci_ls",
 			},
 		},
 	},
@@ -187,6 +188,7 @@ return {
 				"bashls",
 				"lua_ls",
 				"gopls",
+				"gitlab_ci_ls",
 			}
 
 			-- setup servers that just have the default config
@@ -237,6 +239,14 @@ return {
 				settings = {
 					formatterMode = "typstyle",
 				},
+			})
+
+			-- gitlab_ci_ls support
+			vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+				pattern = "*.gitlab-ci*.{yml,yaml}",
+				callback = function()
+					vim.bo.filetype = "yaml.gitlab"
+				end,
 			})
 
 			-- Java LS support

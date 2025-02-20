@@ -24,6 +24,7 @@ return {
 				java = { "google-java-format" },
 				latex = { "latexindent" },
 				bash = { "shfmt" },
+				yaml = { "prettier" },
 				["_"] = { "trim_whitespace" },
 			},
 			-- dont format certain directories
