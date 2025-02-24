@@ -1,19 +1,10 @@
-version = "0.1"
+[default_config]
+version = "0.10.0"
+assembler = "nasm"
+instruction_set = "x86-64"
 
-[assemblers]
-gas = false
-go = false
-z80 = false
-masm = false
-nasm = true
-
-[instruction_sets]
-x86 = false
-x86_64 = true
-z80 = false
-arm = false
-arm64 = false
-riscv = false
-
-[opts]
+[default_config.opts]
 compiler = "nasm"
+compile_flags_txt = []
+diagnostics = true
+default_diagnostics = false
