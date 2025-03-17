@@ -151,6 +151,7 @@ return {
 			"hrsh7th/nvim-cmp",
 			"nvim-java/nvim-java",
 			"mrcjkb/rustaceanvim",
+			"aznhe21/actions-preview.nvim",
 		},
 		config = function(_, _)
 			-- Set up lspconfig.

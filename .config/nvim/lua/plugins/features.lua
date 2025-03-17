@@ -33,9 +33,11 @@ return {
 			end),
 		},
 	},
+	-- show keypresses
 	{
 		"NStefan002/screenkey.nvim",
-		lazy = false,
+		-- lazy = false,
 		version = "*",
+		cmd = "Screenkey",
 	},
 }

@@ -3,6 +3,7 @@ return {
 	-- COBOL syntax highlighting
 	{
 		"Jorengarenar/COBOl.vim",
+		ft = "cobol",
 	},
 	-- Rust Cargo.toml dependency version checking
 	{
@@ -14,6 +15,7 @@ return {
 	-- Extra Rust language support
 	{
 		"rust-lang/rust.vim",
+		ft = "rust",
 	},
 	-- Typst live preview
 	{
@@ -52,7 +54,7 @@ return {
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		},
-		lazy = false,
+		-- lazy = false,
 		branch = "regexp",
 		opts = {
 			settings = {
@@ -65,11 +67,13 @@ return {
 		keys = {
 			{ "<Leader>vs", "<cmd>VenvSelect<CR>" },
 		},
+		ft = "python",
 	},
 	-- textual tcss highlighting
 	{
 		"cachebag/nvim-tcss",
 		config = true,
+		ft = "tcss",
 	},
 	-- vimdoc help
 	{
