@@ -3,7 +3,11 @@ return {
 	-- debug adapter protocol for debugging
 	{
 		"mfussenegger/nvim-dap",
-		dependencies = { "williamboman/mason.nvim" },
+		dependencies = {
+			"rcarriga/nvim-dap-ui",
+			"jay-babu/mason-nvim-dap.nvim",
+			"theHamsta/nvim-dap-virtual-text",
+		},
 		init = function()
 			vim.api.nvim_set_hl(0, "DapStopped", { ctermbg = 0, bg = "#444a57" })
 			vim.fn.sign_define("DapBreakpoint", { text = "●", texthl = "DapBreakpoint", linehl = "", numhl = "" })
@@ -12,11 +16,76 @@ return {
 				{ text = "", texthl = "DapStopped", linehl = "DapStopped", numhl = "DapStopped" }
 			)
 		end,
+		keys = {
+			{
+				"<F5>",
+				function()
+					require("dap").continue()
+				end,
+				desc = "Debug: Continue",
+			},
+			{
+				"<F6>",
+				function()
+					require("dap").step_into()
+				end,
+				desc = "Debug: Step Into",
+			},
+			{
+				"<F7>",
+				function()
+					require("dap").step_over()
+				end,
+				desc = "Debug: Step Over",
+			},
+			{
+				"<F8>",
+				function()
+					require("dap").step_out()
+				end,
+				desc = "Debug: Step Out",
+			},
+			{
+				"<F9>",
+				function()
+					require("dap").step_back()
+				end,
+				desc = "Debug: Step Back",
+			},
+			{
+				"<Leader>dr",
+				function()
+					require("dap").restart()
+				end,
+				desc = "Debug: Restart",
+			},
+			{
+				"<Leader>ds",
+				function()
+					require("dap").close()
+				end,
+				desc = "Debug: Stop",
+			},
+			{
+				"<Leader>dc",
+				function()
+					require("dap").disconnect()
+				end,
+				desc = "Debug: Disconnect",
+			},
+			{
+				"<Leader>b",
+				function()
+					require("dap").toggle_breakpoint()
+				end,
+				desc = "Debug: Toggle Breakpoint",
+			},
+		},
 	},
 	{
 		"jay-babu/mason-nvim-dap.nvim",
 		lazy = false,
-		dependencies = { "mfussenegger/nvim-dap" },
+		dependencies = { "williamboman/mason.nvim" },
 		opts = {
 			ensure_installed = { "codelldb", "python" },
 			automatic_installation = true,
@@ -51,5 +120,6 @@ return {
 		"theHamsta/nvim-dap-virtual-text",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "mfussenegger/nvim-dap" },
 		opts = { virt_text_pos = "eol" },
+		lazy = true,
 	},
 }
