@@ -25,6 +25,7 @@ return {
 				latex = { "latexindent" },
 				bash = { "shfmt" },
 				yaml = { "prettier" },
+				toml = { "taplo" },
 				["_"] = { "trim_whitespace" },
 			},
 			-- dont format certain directories
