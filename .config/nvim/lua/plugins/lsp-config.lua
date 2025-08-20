@@ -14,9 +14,7 @@ return {
 				"lua_ls",
 				"rust_analyzer",
 				"basedpyright",
-				"jdtls",
 				"clangd",
-				"volar",
 				"ts_ls",
 				"asm_lsp",
 				"html",
@@ -176,7 +174,6 @@ return {
 
 			local lspconfig = require("lspconfig")
 			local default_config_servers = {
-				"volar",
 				"basedpyright",
 				"clangd",
 				"asm_lsp",
@@ -223,7 +220,7 @@ return {
 			end
 
 			-- Add vue support to typescript
-			local vue_lsp_path = require("mason-registry").get_package("vue-language-server"):get_install_path()
+			local vue_lsp_path = vim.fn.expand("$MASON/packages/vue-language-server")
 				.. "/node_modules/@vue/language-server"
 			lspconfig.ts_ls.setup({
 				on_attach = on_attach,
