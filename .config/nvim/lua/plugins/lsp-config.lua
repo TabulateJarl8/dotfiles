@@ -28,6 +28,7 @@ return {
 				"tinymist",
 				"gopls",
 				"gitlab_ci_ls",
+				"ruby_lsp",
 			},
 		},
 	},
@@ -187,6 +188,7 @@ return {
 				"lua_ls",
 				"gopls",
 				"gitlab_ci_ls",
+				"ruby_lsp",
 			}
 
 			-- setup servers that just have the default config
