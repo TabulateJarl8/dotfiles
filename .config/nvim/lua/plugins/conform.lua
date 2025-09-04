@@ -26,6 +26,7 @@ return {
 				bash = { "shfmt" },
 				yaml = { "prettier" },
 				toml = { "taplo" },
+				ruby = { "rubyfmt" },
 				["_"] = { "trim_whitespace" },
 			},
 			-- dont format certain directories

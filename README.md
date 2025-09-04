@@ -19,6 +19,12 @@ Install Arch dependencies:
 sudo pacman -Sy ripgrep git texlive biber python-pygments cargo-nextest silicon fd --needed
 ```
 
+For Ruby support:
+
+```sh
+sudo pacman -Sy ruby-bundler ruby-debug --needed
+```
+
 If running X11, install `xclip`, if running wayland, install `wl-clipboard`.
 
 Optionally, install the following AUR dependencies:
