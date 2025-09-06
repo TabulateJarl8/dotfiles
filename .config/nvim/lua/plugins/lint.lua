@@ -3,7 +3,7 @@ return {
 	-- linter support
 	{
 		"mfussenegger/nvim-lint",
-		dependencies = { "williamboman/mason.nvim" },
+		dependencies = { "mason-org/mason.nvim" },
 		lazy = false,
 		config = function()
 			require("lint").linters_by_ft = {

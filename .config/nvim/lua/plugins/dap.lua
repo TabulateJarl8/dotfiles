@@ -85,7 +85,7 @@ return {
 	{
 		"jay-babu/mason-nvim-dap.nvim",
 		lazy = false,
-		dependencies = { "williamboman/mason.nvim" },
+		dependencies = { "mason-org/mason.nvim" },
 		opts = {
 			ensure_installed = { "codelldb", "python" },
 			automatic_installation = true,

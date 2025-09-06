@@ -1,14 +1,14 @@
 -- This file contains all of the LSP configurations
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		lazy = false,
 		opts = {},
 	},
 	-- Define which LSPs should be autoinstalled here
 	{
-		"williamboman/mason-lspconfig.nvim",
-		dependencies = { "williamboman/mason.nvim" },
+		"mason-org/mason-lspconfig.nvim",
+		dependencies = { "mason-org/mason.nvim" },
 		opts = {
 			ensure_installed = {
 				"lua_ls",
@@ -59,7 +59,7 @@ return {
 	-- Rust LSP support
 	{
 		"mrcjkb/rustaceanvim",
-		version = "^5", -- Recommended
+		version = "^6", -- Recommended
 		lazy = false, -- This plugin is already lazy
 	},
 	{
@@ -146,7 +146,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			"williamboman/mason-lspconfig.nvim",
+			"mason-org/mason-lspconfig.nvim",
 			"hrsh7th/nvim-cmp",
 			"nvim-java/nvim-java",
 			"mrcjkb/rustaceanvim",
