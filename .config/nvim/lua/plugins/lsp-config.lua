@@ -30,6 +30,10 @@ return {
 				"gitlab_ci_ls",
 				"ruby_lsp",
 			},
+			-- automatic_installation = false,
+			automatic_setup = false,
+			automatic_enable = false,
+			handlers = nil,
 		},
 	},
 	-- Java LSP support
