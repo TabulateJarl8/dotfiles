@@ -37,29 +37,30 @@ return {
 		},
 	},
 	-- Java LSP support
-	{
-		"nvim-java/nvim-java",
-		opts = {
-			spring_boot_tools = {
-				enable = false,
-			},
-			jdk = {
-				auto_install = false,
-			},
-			root_markers = {
-				".javaroot",
-				"settings.gradle",
-				"settings.gradle.kts",
-				"pom.xml",
-				"build.gradle",
-				"mvnw",
-				"gradlew",
-				"build.gradle",
-				"build.gradle.kts",
-				".git",
-			},
-		},
-	},
+	-- WARN: currently broken until https://github.com/nvim-java/nvim-java/issues/427 is resolved
+	-- {
+	-- 	"nvim-java/nvim-java",
+	-- 	opts = {
+	-- 		spring_boot_tools = {
+	-- 			enable = false,
+	-- 		},
+	-- 		jdk = {
+	-- 			auto_install = false,
+	-- 		},
+	-- 		root_markers = {
+	-- 			".javaroot",
+	-- 			"settings.gradle",
+	-- 			"settings.gradle.kts",
+	-- 			"pom.xml",
+	-- 			"build.gradle",
+	-- 			"mvnw",
+	-- 			"gradlew",
+	-- 			"build.gradle",
+	-- 			"build.gradle.kts",
+	-- 			".git",
+	-- 		},
+	-- 	},
+	-- },
 	-- Rust LSP support
 	{
 		"mrcjkb/rustaceanvim",
@@ -177,7 +178,6 @@ return {
 				end
 			end
 
-			local lspconfig = require("lspconfig")
 			local default_config_servers = {
 				"basedpyright",
 				"clangd",
@@ -197,7 +197,7 @@ return {
 
 			-- setup servers that just have the default config
 			for _, server in ipairs(default_config_servers) do
-				lspconfig[server].setup({ on_attach = on_attach, capabilities = capabilities })
+				vim.lsp.config(server, { on_attach = on_attach, capabilities = capabilities })
 			end
 
 			-- rustaceanvim config
@@ -228,7 +228,7 @@ return {
 			-- Add vue support to typescript
 			local vue_lsp_path = vim.fn.expand("$MASON/packages/vue-language-server")
 				.. "/node_modules/@vue/language-server"
-			lspconfig.ts_ls.setup({
+			vim.lsp.config("ts_ls", {
 				on_attach = on_attach,
 				capabilities = capabilities,
 				init_options = {
@@ -237,7 +237,7 @@ return {
 				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
 			})
 
-			lspconfig.tinymist.setup({
+			vim.lsp.config("tinymist", {
 				on_attach = on_attach,
 				capabilities = capabilities,
 				settings = {
@@ -254,7 +254,7 @@ return {
 			})
 
 			-- Java LS support
-			lspconfig.jdtls.setup({
+			vim.lsp.config("jdtls", {
 				on_attach = on_attach,
 				capabilities = capabilities,
 				settings = {
