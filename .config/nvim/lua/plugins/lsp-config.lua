@@ -73,11 +73,6 @@ return {
 		ft = "lua", -- only load on lua files
 		opts = {},
 	},
-	-- {
-	-- 	"mrcjkb/haskell-tools.nvim",
-	-- 	version = "^6", -- Recommended
-	-- 	lazy = false, -- This plugin is already lazy
-	-- },
 	-- completition library
 	{
 		"hrsh7th/nvim-cmp",
@@ -162,7 +157,6 @@ return {
 			"nvim-java/nvim-java",
 			"mrcjkb/rustaceanvim",
 			"aznhe21/actions-preview.nvim",
-			-- "mrcjkb/haskell-tools.nvim",
 		},
 		config = function(_, _)
 			-- Set up lspconfig.
@@ -215,12 +209,6 @@ return {
 				"hls",
 				{ on_attach = on_attach, capabilities = capabilities, filetypes = { "haskell", "lhaskell", "cabal" } }
 			)
-
-			-- vim.g.haskell_tools = {
-			-- 	hls = {
-			-- 		on_attach = on_attach,
-			-- 	},
-			-- }
 
 			-- rustaceanvim config
 			vim.g.rustaceanvim = function()
