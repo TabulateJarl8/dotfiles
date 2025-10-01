@@ -31,9 +31,11 @@ return {
 				"ruby_lsp",
 				"hls",
 			},
-			-- automatic_installation = false,
-			-- automatic_setup = false,
-			-- automatic_enable = false,
+			automatic_enable = {
+				exclude = {
+					"rust_analyzer",
+				},
+			},
 			handlers = nil,
 		},
 	},
