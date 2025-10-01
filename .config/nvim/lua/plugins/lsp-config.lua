@@ -73,6 +73,11 @@ return {
 		ft = "lua", -- only load on lua files
 		opts = {},
 	},
+	-- {
+	-- 	"mrcjkb/haskell-tools.nvim",
+	-- 	version = "^6", -- Recommended
+	-- 	lazy = false, -- This plugin is already lazy
+	-- },
 	-- completition library
 	{
 		"hrsh7th/nvim-cmp",
@@ -157,12 +162,13 @@ return {
 			"nvim-java/nvim-java",
 			"mrcjkb/rustaceanvim",
 			"aznhe21/actions-preview.nvim",
+			-- "mrcjkb/haskell-tools.nvim",
 		},
 		config = function(_, _)
 			-- Set up lspconfig.
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			local on_attach = function(_, bufnr)
+			local on_attach = function(client, bufnr)
 				-- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
 				-- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
 				vim.keymap.set({ "v", "n" }, "<leader>ca", require("actions-preview").code_actions)
@@ -174,8 +180,11 @@ return {
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 
 				-- inline type hints
-				if vim.lsp.inlay_hint then
-					vim.lsp.inlay_hint.enable(true, { 0 })
+				local caps = client.server_capabilities
+				if vim.lsp.inlay_hint and (caps.inlayHintProvider or caps.inlayHintsProvider) then
+					if vim.bo[bufnr].filetype ~= "cabal" then
+						vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+					end
 				end
 			end
 
@@ -206,6 +215,12 @@ return {
 				"hls",
 				{ on_attach = on_attach, capabilities = capabilities, filetypes = { "haskell", "lhaskell", "cabal" } }
 			)
+
+			-- vim.g.haskell_tools = {
+			-- 	hls = {
+			-- 		on_attach = on_attach,
+			-- 	},
+			-- }
 
 			-- rustaceanvim config
 			vim.g.rustaceanvim = function()
