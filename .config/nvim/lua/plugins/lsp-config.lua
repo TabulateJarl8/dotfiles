@@ -29,10 +29,11 @@ return {
 				"gopls",
 				"gitlab_ci_ls",
 				"ruby_lsp",
+				"hls",
 			},
 			-- automatic_installation = false,
-			automatic_setup = false,
-			automatic_enable = false,
+			-- automatic_setup = false,
+			-- automatic_enable = false,
 			handlers = nil,
 		},
 	},
@@ -193,12 +194,18 @@ return {
 				"gopls",
 				"gitlab_ci_ls",
 				"ruby_lsp",
+				-- "hls",
 			}
 
 			-- setup servers that just have the default config
 			for _, server in ipairs(default_config_servers) do
 				vim.lsp.config(server, { on_attach = on_attach, capabilities = capabilities })
 			end
+
+			vim.lsp.config(
+				"hls",
+				{ on_attach = on_attach, capabilities = capabilities, filetypes = { "haskell", "lhaskell", "cabal" } }
+			)
 
 			-- rustaceanvim config
 			vim.g.rustaceanvim = function()
