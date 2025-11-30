@@ -1,9 +1,9 @@
 -- This file contains configuration for plugins that add new features to the editor
 return {
 	-- Wakatime metrics
-	{ "wakatime/vim-wakatime", lazy = false },
+	{ "wakatime/vim-wakatime", event = "VeryLazy" },
 	-- Discord RPC
-	{ "andweeb/presence.nvim", lazy = false },
+	{ "andweeb/presence.nvim", event = "VeryLazy" },
 	-- Silicon code image generation
 	{
 		"krivahtoo/silicon.nvim",
@@ -21,7 +21,7 @@ return {
 				return vim.fn.fnamemodify(vim.fn.bufname(vim.fn.bufnr()), ":~:.")
 			end,
 		},
-		lazy = false,
+		cmd = "Silicon",
 	},
 	-- gitignore downloader
 	{

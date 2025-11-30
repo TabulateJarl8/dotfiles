@@ -8,7 +8,8 @@ return {
 				return vim.bo.commentstring
 			end,
 		},
-		lazy = false,
+		event = "VeryLazy",
+		keys = { { "<leader>/", mode = { "n", "x" } } },
 		dependencies = {
 			"JoosepAlviste/nvim-ts-context-commentstring",
 			"nvim-treesitter/nvim-treesitter",
@@ -35,7 +36,7 @@ return {
 	-- autoclose html tags
 	{
 		"windwp/nvim-ts-autotag",
-		lazy = false,
+		event = "InsertEnter",
 		opts = {},
 	},
 	-- modify surrounding delimiter pairs

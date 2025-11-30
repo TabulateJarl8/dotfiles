@@ -30,6 +30,7 @@ return {
 		opts = {
 			current_line_blame = true,
 		},
+		event = "BufReadPre",
 	},
 	-- Highlight colors with themselves in editor
 	{
@@ -49,6 +50,7 @@ return {
 		"folke/todo-comments.nvim",
 		opts = {},
 		dependencies = { "nvim-lua/plenary.nvim" },
+		event = "BufReadPost",
 	},
 	-- DAP UI
 	{
@@ -57,6 +59,8 @@ return {
 			"mfussenegger/nvim-dap",
 			"nvim-neotest/nvim-nio",
 		},
+		event = "VeryLazy",
+		keys = require("keymaps.dap"),
 		config = function()
 			-- automatically open DAP UI on DAP startup
 			local dap, dapui = require("dap"), require("dapui")

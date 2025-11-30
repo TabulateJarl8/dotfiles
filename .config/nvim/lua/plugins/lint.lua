@@ -4,7 +4,7 @@ return {
 	{
 		"mfussenegger/nvim-lint",
 		dependencies = { "mason-org/mason.nvim" },
-		lazy = false,
+		event = "BufWritePost",
 		config = function()
 			require("lint").linters_by_ft = {
 				java = { "checkstyle" },
@@ -27,8 +27,8 @@ return {
 		-- TODO: change this back once https://github.com/rshkarin/mason-nvim-lint/pull/20 is merged
 		"TabulateJarl8/mason-nvim-lint",
 		branch = "patch-1",
-		lazy = false,
 		dependencies = { "mfussenegger/nvim-lint" },
 		opts = {},
+		event = "VeryLazy",
 	},
 }

@@ -26,6 +26,7 @@ return {
 				},
 			})
 		end,
+		event = "VeryLazy",
 		cmd = { "Neotest" },
 	},
 	-- code coverage reporting

@@ -30,7 +30,7 @@ return {
 	-- LaTeX language support
 	{
 		"lervag/vimtex",
-		lazy = false,
+		ft = "tex",
 		init = function()
 			vim.g.vimtex_view_general_viewer = "okular"
 			vim.g.vimtex_view_general_options = "--unique file:@pdf\\#src:@line@tex"
@@ -75,10 +75,10 @@ return {
 	-- vimdoc help
 	{
 		"OXY2DEV/helpview.nvim",
-		lazy = false, -- Recommended
+		-- lazy = false, -- Recommended
 
 		-- In case you still want to lazy load
-		-- ft = "help",
+		ft = "help",
 
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",

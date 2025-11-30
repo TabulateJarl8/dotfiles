@@ -2,13 +2,14 @@
 return {
 	{
 		"mason-org/mason.nvim",
-		lazy = false,
 		opts = {},
+		event = "VeryLazy",
 	},
 	-- Define which LSPs should be autoinstalled here
 	{
 		"mason-org/mason-lspconfig.nvim",
 		dependencies = { "mason-org/mason.nvim" },
+		event = "VeryLazy",
 		opts = {
 			ensure_installed = {
 				"lua_ls",
@@ -297,7 +298,7 @@ return {
 	},
 	{
 		"ray-x/lsp_signature.nvim",
-		event = "VeryLazy",
+		event = "LspAttach",
 		opts = {},
 	},
 }
