@@ -67,7 +67,7 @@ return {
 	-- Rust LSP support
 	{
 		"mrcjkb/rustaceanvim",
-		version = "^6", -- Recommended
+		version = "^7", -- Recommended
 		lazy = false, -- This plugin is already lazy
 	},
 	{
