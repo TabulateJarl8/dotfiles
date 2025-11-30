@@ -156,7 +156,7 @@ return {
 		dependencies = {
 			"mason-org/mason-lspconfig.nvim",
 			"hrsh7th/nvim-cmp",
-			"nvim-java/nvim-java",
+			-- "nvim-java/nvim-java",
 			"mrcjkb/rustaceanvim",
 			"aznhe21/actions-preview.nvim",
 		},
@@ -266,33 +266,33 @@ return {
 			})
 
 			-- Java LS support
-			vim.lsp.config("jdtls", {
-				on_attach = on_attach,
-				capabilities = capabilities,
-				settings = {
-					java = {
-						project = {
-							referencedLibraries = {
-								"lib/**/*.jar",
-							},
-							sourcePaths = {
-								"src",
-							},
-							outputPath = "bin",
-						},
-						debug = {
-							settings = {
-								stepping = {
-									skipClasses = {
-										"$JDK",
-										"$Libraries",
-									},
-								},
-							},
-						},
-					},
-				},
-			})
+			-- vim.lsp.config("jdtls", {
+			-- 	on_attach = on_attach,
+			-- 	capabilities = capabilities,
+			-- 	settings = {
+			-- 		java = {
+			-- 			project = {
+			-- 				referencedLibraries = {
+			-- 					"lib/**/*.jar",
+			-- 				},
+			-- 				sourcePaths = {
+			-- 					"src",
+			-- 				},
+			-- 				outputPath = "bin",
+			-- 			},
+			-- 			debug = {
+			-- 				settings = {
+			-- 					stepping = {
+			-- 						skipClasses = {
+			-- 							"$JDK",
+			-- 							"$Libraries",
+			-- 						},
+			-- 					},
+			-- 				},
+			-- 			},
+			-- 		},
+			-- 	},
+			-- })
 		end,
 	},
 	{
