@@ -35,6 +35,7 @@ return {
 			automatic_enable = {
 				exclude = {
 					"rust_analyzer",
+					"ruff",
 				},
 			},
 			handlers = nil,
