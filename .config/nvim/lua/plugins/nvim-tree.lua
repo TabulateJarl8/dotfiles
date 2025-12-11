@@ -14,5 +14,12 @@ return {
 		-- enable 24-bit colour
 		vim.opt.termguicolors = true
 	end,
-	opts = {},
+	opts = {
+		renderer = {
+			highlight_git = true,
+		},
+		filters = {
+			git_ignored = false,
+		},
+	},
 }
