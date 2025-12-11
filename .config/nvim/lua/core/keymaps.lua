@@ -24,7 +24,6 @@ vim.keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- make ctrl+del work in insert mode
 vim.api.nvim_set_keymap("i", "<C-Del>", "<C-o>dw", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("i", "<C-H>", "<C-W>", { noremap = true, silent = true })
 
 -- make escape in normal mode clear highlighting
 vim.api.nvim_set_keymap("n", "<Esc>", ":noh<CR>", { noremap = true, silent = true })
