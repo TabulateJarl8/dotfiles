@@ -20,6 +20,7 @@ return {
 				html = { "prettier" },
 				htmlhugo = { "prettier" },
 				c = { "clang-format" },
+				cpp = { "clang-format" },
 				markdown = { "prettier" },
 				java = { "google-java-format" },
 				latex = { "latexindent" },
