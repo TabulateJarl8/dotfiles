@@ -31,6 +31,8 @@ return {
 				"gitlab_ci_ls",
 				"ruby_lsp",
 				"hls",
+				"gh_actions_ls",
+				"openscad_lsp",
 			},
 			automatic_enable = {
 				exclude = {
@@ -200,7 +202,9 @@ return {
 				"lua_ls",
 				"gopls",
 				"gitlab_ci_ls",
+				"gh_actions_ls",
 				"ruby_lsp",
+				"openscad_lsp",
 				-- "hls",
 			}
 

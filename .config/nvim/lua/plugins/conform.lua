@@ -19,6 +19,8 @@ return {
 				svg = { "prettier" },
 				html = { "prettier" },
 				htmlhugo = { "prettier" },
+				scss = { "prettier" },
+				css = { "prettier" },
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				markdown = { "prettier" },
@@ -40,6 +42,7 @@ return {
 			end,
 		},
 		init = function()
+			-- TODO: should i switch to prettierd? if so, how do i migrate this?
 			require("conform").formatters.prettier = {
 				prepend_args = { "--vue-indent-script-and-style" },
 			}
