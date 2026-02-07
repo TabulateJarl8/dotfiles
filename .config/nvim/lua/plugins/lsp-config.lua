@@ -43,31 +43,6 @@ return {
 			handlers = nil,
 		},
 	},
-	-- Java LSP support
-	-- WARN: currently broken until https://github.com/nvim-java/nvim-java/issues/427 is resolved
-	-- {
-	-- 	"nvim-java/nvim-java",
-	-- 	opts = {
-	-- 		spring_boot_tools = {
-	-- 			enable = false,
-	-- 		},
-	-- 		jdk = {
-	-- 			auto_install = false,
-	-- 		},
-	-- 		root_markers = {
-	-- 			".javaroot",
-	-- 			"settings.gradle",
-	-- 			"settings.gradle.kts",
-	-- 			"pom.xml",
-	-- 			"build.gradle",
-	-- 			"mvnw",
-	-- 			"gradlew",
-	-- 			"build.gradle",
-	-- 			"build.gradle.kts",
-	-- 			".git",
-	-- 		},
-	-- 	},
-	-- },
 	-- Rust LSP support
 	{
 		"mrcjkb/rustaceanvim",
@@ -160,7 +135,6 @@ return {
 		dependencies = {
 			"mason-org/mason-lspconfig.nvim",
 			"hrsh7th/nvim-cmp",
-			-- "nvim-java/nvim-java",
 			"mrcjkb/rustaceanvim",
 			"aznhe21/actions-preview.nvim",
 		},
@@ -270,35 +244,6 @@ return {
 					vim.bo.filetype = "yaml.gitlab"
 				end,
 			})
-
-			-- Java LS support
-			-- vim.lsp.config("jdtls", {
-			-- 	on_attach = on_attach,
-			-- 	capabilities = capabilities,
-			-- 	settings = {
-			-- 		java = {
-			-- 			project = {
-			-- 				referencedLibraries = {
-			-- 					"lib/**/*.jar",
-			-- 				},
-			-- 				sourcePaths = {
-			-- 					"src",
-			-- 				},
-			-- 				outputPath = "bin",
-			-- 			},
-			-- 			debug = {
-			-- 				settings = {
-			-- 					stepping = {
-			-- 						skipClasses = {
-			-- 							"$JDK",
-			-- 							"$Libraries",
-			-- 						},
-			-- 					},
-			-- 				},
-			-- 			},
-			-- 		},
-			-- 	},
-			-- })
 		end,
 	},
 	{

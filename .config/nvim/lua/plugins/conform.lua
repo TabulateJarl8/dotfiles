@@ -24,7 +24,6 @@ return {
 				c = { "clang-format" },
 				cpp = { "clang-format" },
 				markdown = { "prettier" },
-				java = { "google-java-format" },
 				latex = { "latexindent" },
 				bash = { "shfmt" },
 				yaml = { "prettier" },
