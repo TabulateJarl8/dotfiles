@@ -7,7 +7,6 @@ return {
 		event = "BufWritePost",
 		config = function()
 			require("lint").linters_by_ft = {
-				java = { "checkstyle" },
 				python = { "ruff" },
 				vue = { "eslint_d" },
 				typescriptreact = { "biomejs" },

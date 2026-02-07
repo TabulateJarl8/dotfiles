@@ -18,6 +18,11 @@ return {
 					ruby = { "rubyfmt" },
 					["_"] = { "trim_whitespace" },
 				},
+				formatters = {
+					prettierd = {
+						prepend_args = { "--vue-indent-script-and-style" },
+					},
+				},
 				-- dont format certain directories
 				format_after_save = function(bufnr)
 					local bufname = vim.api.nvim_buf_get_name(bufnr)
@@ -33,18 +38,13 @@ return {
 				biome = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
 				["clang-format"] = { "c", "cpp" },
 			}
-			for formatter, fts in ipairs(bulk_formatters) do
+			for formatter, fts in pairs(bulk_formatters) do
 				for _, ft in ipairs(fts) do
 					opts.formatters_by_ft[ft] = { formatter }
 				end
 			end
 
 			return opts
-		end,
-		init = function()
-			require("conform").formatters.prettierd = {
-				prepend_args = { "--vue-indent-script-and-style" },
-			}
 		end,
 	},
 	{
