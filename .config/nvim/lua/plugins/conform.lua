@@ -7,42 +7,42 @@ return {
 		},
 		event = { "BufWritePre" },
 		cmd = { "ConformInfo" },
-		opts = {
-			formatters_by_ft = {
-				lua = { "stylua" },
-				python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
-				javascript = { "biome" },
-				typescript = { "biome" },
-				typescriptreact = { "biome" },
-				javascriptreact = { "biome" },
-				vue = { "prettier" },
-				svg = { "prettier" },
-				html = { "prettier" },
-				htmlhugo = { "prettier" },
-				scss = { "prettier" },
-				css = { "prettier" },
-				c = { "clang-format" },
-				cpp = { "clang-format" },
-				markdown = { "prettier" },
-				latex = { "latexindent" },
-				bash = { "shfmt" },
-				yaml = { "prettier" },
-				toml = { "taplo" },
-				ruby = { "rubyfmt" },
-				["_"] = { "trim_whitespace" },
-			},
-			-- dont format certain directories
-			format_after_save = function(bufnr)
-				local bufname = vim.api.nvim_buf_get_name(bufnr)
-				if bufname:match("/qmk_firmware/") then
-					return
+		opts = function()
+			local opts = {
+				formatters_by_ft = {
+					lua = { "stylua" },
+					python = { "ruff_format", "ruff_fix", "ruff_organize_imports" },
+					latex = { "latexindent" },
+					bash = { "shfmt" },
+					toml = { "taplo" },
+					ruby = { "rubyfmt" },
+					["_"] = { "trim_whitespace" },
+				},
+				-- dont format certain directories
+				format_after_save = function(bufnr)
+					local bufname = vim.api.nvim_buf_get_name(bufnr)
+					if bufname:match("/qmk_firmware/") then
+						return
+					end
+					return { lsp_fallback = true } --timeout_ms = 500, lsp_fallback = true },
+				end,
+			}
+
+			local bulk_formatters = {
+				prettierd = { "vue", "svg", "html", "htmlhugo", "scss", "css", "markdown", "yaml" },
+				biome = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
+				["clang-format"] = { "c", "cpp" },
+			}
+			for formatter, fts in ipairs(bulk_formatters) do
+				for _, ft in ipairs(fts) do
+					opts.formatters_by_ft[ft] = { formatter }
 				end
-				return { lsp_fallback = true } --timeout_ms = 500, lsp_fallback = true },
-			end,
-		},
+			end
+
+			return opts
+		end,
 		init = function()
-			-- TODO: should i switch to prettierd? if so, how do i migrate this?
-			require("conform").formatters.prettier = {
+			require("conform").formatters.prettierd = {
 				prepend_args = { "--vue-indent-script-and-style" },
 			}
 		end,
