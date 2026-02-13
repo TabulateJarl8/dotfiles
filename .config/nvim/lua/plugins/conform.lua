@@ -34,8 +34,20 @@ return {
 			}
 
 			local bulk_formatters = {
-				prettierd = { "vue", "svg", "html", "htmlhugo", "scss", "css", "markdown", "yaml" },
-				biome = { "javascript", "typescript", "typescriptreact", "javascriptreact" },
+				prettierd = {
+					"vue",
+					"svg",
+					"html",
+					"htmlhugo",
+					"scss",
+					"css",
+					"markdown",
+					"yaml",
+					"javascript",
+					"typescript",
+					"typescriptreact",
+					"javascriptreact",
+				},
 				["clang-format"] = { "c", "cpp" },
 			}
 			for formatter, fts in pairs(bulk_formatters) do
