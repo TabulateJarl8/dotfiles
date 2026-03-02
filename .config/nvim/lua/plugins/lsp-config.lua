@@ -30,7 +30,6 @@ return {
 				"gopls",
 				"gitlab_ci_ls",
 				"ruby_lsp",
-				"hls",
 				"gh_actions_ls",
 				"openscad_lsp",
 			},
@@ -179,18 +178,13 @@ return {
 				"gh_actions_ls",
 				"ruby_lsp",
 				"openscad_lsp",
-				-- "hls",
+				"tl_ls",
 			}
 
 			-- setup servers that just have the default config
 			for _, server in ipairs(default_config_servers) do
 				vim.lsp.config(server, { on_attach = on_attach, capabilities = capabilities })
 			end
-
-			vim.lsp.config(
-				"hls",
-				{ on_attach = on_attach, capabilities = capabilities, filetypes = { "haskell", "lhaskell", "cabal" } }
-			)
 
 			-- rustaceanvim config
 			vim.g.rustaceanvim = function()
@@ -216,18 +210,6 @@ return {
 					},
 				}
 			end
-
-			-- Add vue support to typescript
-			local vue_lsp_path = vim.fn.expand("$MASON/packages/vue-language-server")
-				.. "/node_modules/@vue/language-server"
-			vim.lsp.config("ts_ls", {
-				on_attach = on_attach,
-				capabilities = capabilities,
-				init_options = {
-					plugins = { { name = "@vue/typescript-plugin", location = vue_lsp_path, languages = { "vue" } } },
-				},
-				filetypes = { "typescript", "javascript", "javascriptreact", "typescriptreact", "vue" },
-			})
 
 			vim.lsp.config("tinymist", {
 				on_attach = on_attach,

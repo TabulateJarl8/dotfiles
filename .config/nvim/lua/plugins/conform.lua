@@ -18,11 +18,6 @@ return {
 					ruby = { "rubyfmt" },
 					["_"] = { "trim_whitespace" },
 				},
-				formatters = {
-					prettierd = {
-						prepend_args = { "--vue-indent-script-and-style" },
-					},
-				},
 				-- dont format certain directories
 				format_after_save = function(bufnr)
 					local bufname = vim.api.nvim_buf_get_name(bufnr)
@@ -35,7 +30,6 @@ return {
 
 			local bulk_formatters = {
 				prettierd = {
-					"vue",
 					"svg",
 					"html",
 					"htmlhugo",
