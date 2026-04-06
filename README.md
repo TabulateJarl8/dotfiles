@@ -18,7 +18,7 @@ stow .
 Install Arch dependencies:
 
 ```sh
-sudo pacman -Sy neovim ripgrep git texlive biber python-pygments cargo-nextest silicon fd --needed
+sudo pacman -Sy neovim ripgrep git texlive biber python-pygments cargo-nextest silicon fd tree-sitter-cli --needed
 ```
 
 If running X11, install `xclip`, if running wayland, install `wl-clipboard`.
@@ -44,21 +44,25 @@ On first launch of nvim, rebuild the silicon themes:
 ### LSP Dependencies
 
 ### Various
+
 ```sh
 sudo pacman -Sy npm
 ```
 
 ### Ruby
+
 ```sh
 sudo pacman -Sy ruby-bundler ruby-debug --needed
 ```
 
 ### Go
+
 ```sh
 sudo pacman -Sy go
 ```
 
 ### Haskell
+
 ```sh
 paru -S ghcup-hs-bin
 ghcup install ghc --set
