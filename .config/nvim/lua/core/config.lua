@@ -5,6 +5,8 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.signcolumn = "yes"
 
+vim.opt.fillchars:append({ eob = " " })
+
 -- ignore case in searches
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
