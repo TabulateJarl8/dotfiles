@@ -10,7 +10,6 @@ return {
 			flavour = "mocha",
 			integrations = {
 				nvimtree = true,
-				treesitter = true,
 				mason = true,
 				telescope = true,
 				gitsigns = true,
