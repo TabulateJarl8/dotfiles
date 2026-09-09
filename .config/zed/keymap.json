@@ -1,0 +1,83 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    },
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // "j k": "vim::NormalBefore"
+    },
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "d": "project_panel::Delete",
+      "y": "project_panel::Copy",
+      "x": "project_panel::Cut",
+      "p": "project_panel::Paste",
+      "r": "project_panel::Rename",
+    },
+  },
+  {
+    "context": "VimControl || !vim_mode && !CommandPalette && !BufferSearchBar",
+    "bindings": {
+      // switching between panes
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal",
+    "bindings": {
+      // telescope find file
+      "space f f": "file_finder::Toggle",
+      // telescope find grep
+      "space f g": "text_finder::Toggle",
+      "space r n": "editor::Rename",
+      // insert blank line above/below
+      "space O": [
+        "workspace::SendKeystrokes",
+        "m a O escape ` a"
+      ],
+      "space o": [
+        "workspace::SendKeystrokes",
+        "m a o escape k ` a"
+      ],
+      "+": "vim::Increment",
+      "-": "vim::Decrement",
+      "ctrl-a": "editor::SelectAll",
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "space c a": "editor::ToggleCodeActions"
+    }
+  },
+  {
+    "context": "vim_mode == visual || vim_mode == normal",
+    "bindings": {
+      "space /": "vim::ToggleComments"
+    }
+  },
+  {
+    "context": "vim_mode == visual",
+    "unbind": {
+      "g c": "vim::ToggleComments"
+    }
+  },
+]
