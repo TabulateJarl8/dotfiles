@@ -46,5 +46,13 @@
   },
   "wrap_guides": [
     100
-  ]
+  ],
+  "auto_install_extensions": {
+    "html": true,
+    "toml": true,
+    "catppuccin": true,
+    "catppuccin-icons": true,
+    "discord-presence": true,
+    "wakatime": true
+  }
 }
