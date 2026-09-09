@@ -8,6 +8,20 @@
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
   "proxy": "",
+  "languages": {
+    "Rust": {
+      "semantic_tokens": "combined",
+    }
+  },
+  "global_lsp_settings": {
+    // disable lsp semantic token styling for comments so that the zed-comments extension can
+    // highlight TODOs, WARNs, etc
+    "semantic_token_rules": [
+      {
+        "token_type": "comment"
+      }
+    ]
+  },
   "agent": {
     "button": false,
     "favorite_models": [],
@@ -53,6 +67,33 @@
     "catppuccin": true,
     "catppuccin-icons": true,
     "discord-presence": true,
-    "wakatime": true
-  }
+    "wakatime": true,
+    "comment": true,
+  },
+  "theme_overrides": {
+    "Catppuccin Mocha": {
+      "syntax": {
+        "constant.comment.todo": {
+          "color": "#f9e2af",
+          "background_color": "#313244",
+          "font_weight": 600,
+        },
+        "string.comment.info": {
+          "color": "#89b4fa",
+          "background_color": "#313244",
+          "font_weight": 600,
+        },
+        "keyword.comment.warn": {
+          "color": "#fab387",
+          "background_color": "#313244",
+          "font_weight": 600,
+        },
+        "property.comment.error": {
+          "color": "#f38ba8",
+          "background_color": "#45475a",
+          "font_weight": 600,
+        },
+      },
+    },
+  },
 }
