@@ -60,6 +60,9 @@
       "+": "vim::Increment",
       "-": "vim::Decrement",
       "ctrl-a": "editor::SelectAll",
+      "space w": "pane::CloseActiveItem",
+      "tab": "pane::ActivateNextItem",
+      "shift-tab": "pane::ActivatePreviousItem",
     }
   },
   {
@@ -80,4 +83,11 @@
       "g c": "vim::ToggleComments"
     }
   },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-tab": "pane::ActivateNextItem",
+      "ctrl-shift-tab": "pane::ActivatePreviousItem"
+    }
+  }
 ]
