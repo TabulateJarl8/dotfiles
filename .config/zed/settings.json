@@ -22,6 +22,15 @@
       }
     ]
   },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "cargo": {
+          "features": "all",
+        }
+      }
+    }
+  },
   "agent": {
     "button": false,
     "favorite_models": [],
@@ -29,9 +38,6 @@
   },
   "title_bar": {
     "show_branch_status_icon": false
-  },
-  "prettier": {
-    "allowed": false
   },
   "format_on_save": "on",
   "minimap": {

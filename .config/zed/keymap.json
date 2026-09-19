@@ -63,6 +63,7 @@
       "space w": "pane::CloseActiveItem",
       "tab": "pane::ActivateNextItem",
       "shift-tab": "pane::ActivatePreviousItem",
+      "g u": "editor::GoToImplementation",
     }
   },
   {
