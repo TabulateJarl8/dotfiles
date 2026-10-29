@@ -15,6 +15,7 @@
   {
     "context": "Editor && vim_mode == insert",
     "bindings": {
+      "ctrl-shift-u": ["workspace::SendKeystrokes", "ctrl-v u"],
       // "j k": "vim::NormalBefore"
     },
   },
@@ -38,7 +39,7 @@
       "ctrl-j": "workspace::ActivatePaneDown",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-l": "workspace::ActivatePaneRight",
-    }
+    },
   },
   {
     "context": "Editor && vim_mode == normal",
@@ -49,14 +50,8 @@
       "space f g": "text_finder::Toggle",
       "space r n": "editor::Rename",
       // insert blank line above/below
-      "space O": [
-        "workspace::SendKeystrokes",
-        "m a O escape ` a"
-      ],
-      "space o": [
-        "workspace::SendKeystrokes",
-        "m a o escape k ` a"
-      ],
+      "space O": ["workspace::SendKeystrokes", "m a O escape ` a"],
+      "space o": ["workspace::SendKeystrokes", "m a o escape k ` a"],
       "+": "vim::Increment",
       "-": "vim::Decrement",
       "ctrl-a": "editor::SelectAll",
@@ -64,31 +59,31 @@
       "tab": "pane::ActivateNextItem",
       "shift-tab": "pane::ActivatePreviousItem",
       "g u": "editor::GoToImplementation",
-    }
+    },
   },
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "space c a": "editor::ToggleCodeActions"
-    }
+      "space c a": "editor::ToggleCodeActions",
+    },
   },
   {
     "context": "vim_mode == visual || vim_mode == normal",
     "bindings": {
-      "space /": "vim::ToggleComments"
-    }
+      "space /": "vim::ToggleComments",
+    },
   },
   {
     "context": "vim_mode == visual",
     "unbind": {
-      "g c": "vim::ToggleComments"
-    }
+      "g c": "vim::ToggleComments",
+    },
   },
   {
     "context": "Pane",
     "bindings": {
       "ctrl-tab": "pane::ActivateNextItem",
-      "ctrl-shift-tab": "pane::ActivatePreviousItem"
-    }
-  }
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+    },
+  },
 ]
