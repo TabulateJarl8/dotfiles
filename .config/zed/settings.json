@@ -7,41 +7,60 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ssh_connections": [
+    {
+      "host": "stu",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/cs/home/stu/samplejc/cs456"],
+        },
+      ],
+    },
+  ],
   "proxy": "",
   "languages": {
     "Rust": {
       "semantic_tokens": "combined",
-    }
+    },
+    "GLSL": {
+      "formatter": {
+        "external": {
+          "command": "clang-format",
+          "arguments": ["--assume-filename=shader.frag"],
+        },
+      },
+    },
   },
   "global_lsp_settings": {
     // disable lsp semantic token styling for comments so that the zed-comments extension can
     // highlight TODOs, WARNs, etc
     "semantic_token_rules": [
       {
-        "token_type": "comment"
-      }
-    ]
+        "token_type": "comment",
+      },
+    ],
   },
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
         "cargo": {
           "features": "all",
-        }
-      }
-    }
+        },
+      },
+    },
   },
   "agent": {
     "button": false,
     "favorite_models": [],
-    "model_parameters": []
+    "model_parameters": [],
   },
   "title_bar": {
-    "show_branch_status_icon": false
+    "show_branch_status_icon": false,
   },
   "format_on_save": "on",
   "minimap": {
-    "show": "auto"
+    "show": "auto",
   },
   "relative_line_numbers": "enabled",
   "auto_signature_help": true,
@@ -52,21 +71,19 @@
   "icon_theme": "Catppuccin Mocha",
   "project_panel": {
     "git_status_indicator": false,
-    "dock": "left"
+    "dock": "left",
   },
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "buffer_font_features": {
-    "calt": false
+    "calt": false,
   },
   "theme": {
     "mode": "system",
     "light": "One Light",
     "dark": "Catppuccin Mocha",
   },
-  "wrap_guides": [
-    100
-  ],
+  "wrap_guides": [100],
   "auto_install_extensions": {
     "html": true,
     "toml": true,
