@@ -50,8 +50,8 @@
       "space f g": "text_finder::Toggle",
       "space r n": "editor::Rename",
       // insert blank line above/below
-      "space O": ["workspace::SendKeystrokes", "m a O escape ` a"],
-      "space o": ["workspace::SendKeystrokes", "m a o escape k ` a"],
+      "space O": ["workspace::SendKeystrokes", "m a O escape 0 D ` a"],
+      "space o": ["workspace::SendKeystrokes", "m a o escape 0 D k ` a"],
       "+": "vim::Increment",
       "-": "vim::Decrement",
       "ctrl-a": "editor::SelectAll",
